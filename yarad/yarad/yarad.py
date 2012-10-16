@@ -76,18 +76,15 @@ def mainloop(rules, srv_config):
 			os.unlink(srv_config["file"])
 		server = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 		server.bind(srv_config["file"])
-		net_socket = False
+		dispatch_func = dipatch_client_unix_file
 	else:
 		server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		server.bind((srv_config["host"], srv_config["port"]))
-		net_socket = True
+		dispatch_func = dispatch_client_inet_socket
 	server.listen(1)
 	while True:
 		conn, addr = server.accept()
-		if net_socket == True:
-			p = Process(target=dispatch_client_inet_socket, args=(conn, rules))
-		else:
-			p = Process(target=dipatch_client_unix_file, args=(conn, rules))
+		p = Process(target=dispatch_func, args=(conn, rules))
 		p.start()
 	server.close()
 
