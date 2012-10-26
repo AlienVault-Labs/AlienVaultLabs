@@ -51,7 +51,7 @@ class pyarad:
 					self.conn.send(self.zdump_file(filename))
 				else:
 					self.conn.send(filename)
-				return self.conn.recv(1024)
+				return ast.literal_eval(self.conn.recv(1024))
 			else:
 				return []
 		else:
@@ -66,7 +66,7 @@ class pyarad:
 				f.write(filebuffer)
 				f.close()
 				self.conn.send(filename)
-			result = self.conn.recv(1024)
+			result = ast.literal_eval(self.conn.recv(1024))
 			if self.net_socket == False:
 				os.unlink(filename)
 			return result
