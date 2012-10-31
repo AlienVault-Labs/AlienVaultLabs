@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="68505678-f820-48c5-9d13-fa0b3b8be190" last-modified="2012-10-31T17:48:37" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>GeorBot</short_description>
+  <authored_by>Jaime Blasco</authored_by>
+  <authored_date>2012-10-31T17:32:47</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR">
+      <IndicatorItem id="84a01d91-9f32-479f-9d66-bac8ea9b7307" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">usbclient.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fa95a35e-9edb-408c-9c25-912082bee587" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">rpcsrv.log</Content>
+      </IndicatorItem>
+      <Indicator operator="AND" id="3b7655c9-4f78-4b19-8c9d-64aec8b3d80f">
+        <IndicatorItem id="425ab1ea-828d-46e9-9a18-41c660a20d25" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Path" type="mir" />
+          <Content type="string">\Microsoft\Windows\CurrentVersion\Run  </Content>
+        </IndicatorItem>
+        <IndicatorItem id="7c0a15cc-e130-45cc-a037-0310b1f5a380" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Text" type="mir" />
+          <Content type="string">USBSERV</Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="e93e4035-aaa8-4624-b3f5-32d9e9e30652">
+        <IndicatorItem id="e4debd54-4b00-4238-aaa0-d8784ca76f2f" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+          <Content type="string">USBSERV</Content>
+        </IndicatorItem>
+        <IndicatorItem id="6304b362-f312-4291-a392-811fcf744240" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+          <Content type="string">usbclient.exe</Content>
+        </IndicatorItem>
+        <IndicatorItem id="a41aefdf-820e-4986-8653-2b2ca3f757a5" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+          <Content type="string">modules/docs/</Content>
+        </IndicatorItem>
+        <IndicatorItem id="e44bec0e-63b0-4de4-b99a-43879ad92d86" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+          <Content type="string">bot123</Content>
+        </IndicatorItem>
+        <Indicator operator="OR" id="8dc24129-bbef-478d-818e-5aaa7c44f3f7">
+          <IndicatorItem id="2d367add-7dec-4f3f-8fbe-c24bf7f9a71d" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">cr5_0</Content>
+          </IndicatorItem>
+          <IndicatorItem id="f7c8f777-7339-47e3-afa4-674d4d2cf665" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">cr1_0</Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+    </Indicator>
+  </definition>
+</ioc>
