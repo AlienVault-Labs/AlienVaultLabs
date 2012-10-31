@@ -1,0 +1,8 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET MALWARE Georbot requesting update"; flow: to_server,established; content:"/modules/docs/upload/calc.exe"; http_uri; classtype:trojan-activity; sid:1111111112; rev:1;)
+
+
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET MALWARE Georbot initial checkin"; flow: to_server,established; content:"POST"; http_method; nocase; content:".php?ver="; http_uri; content:"&p=cert123"; fast_pattern; http_uri; content:"&id="; http_uri; classtype:trojan-activity; sid:1111111113; rev:1;)
+
+
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET MALWARE Georbot checkin"; flow: to_server,established; content:".php?ver="; http_uri; content:"&p=bot123"; fast_pattern; http_uri; content:"&id="; http_uri; classtype:trojan-activity; sid:1111111114; rev:1;)
