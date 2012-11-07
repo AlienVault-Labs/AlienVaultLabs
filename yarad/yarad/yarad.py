@@ -43,7 +43,12 @@ def dipatch_client_unix_file(conn, rules):
 			if f == "!close":
 				break
 			if os.path.exists(f):
-				matches = rules.match(f)
+				matches = []
+				for i in rules.match(f):
+					matches.append({
+							"name": i.rule, "namespace": i.namespace,
+							"meta": i.meta, "tags": i.tags
+						       })
 				conn.send(str(matches))
 			else:
 				conn.send("[]")
@@ -59,7 +64,12 @@ def dispatch_client_inet_socket(conn, rules):
 			if f == "!close":
 				break
 			sample_stream = zlib.decompress(f)
-			matches = rules.match(data=sample_stream)
+			matches = []
+			for i in rules.match(data=sample_stream):
+				matches.append({
+						"name": i.rule, "namespace": i.namespace,
+						"meta": i.meta, "tags": i.tags
+					       })
 			conn.send(str(matches))
 		except:
 			break
