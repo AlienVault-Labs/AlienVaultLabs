@@ -1,0 +1,1561 @@
+;
+; Entry Point packers signatures
+; 389 signatures in list
+;
+
+[.BJFnt v1.1b]
+signature = EB 02 69 B1 83 EC 04 EB 03 CD 20 EB EB 01 EB 9C EB 01 EB
+ep_only = true
+
+[.BJFnt v1.2 RC]
+signature = EB 03 3A 4D 3A 1E EB 02 CD 20 9C EB 02 CD 20 EB 02 CD 20
+ep_only = true
+
+[.BJFnt v1.3]
+signature = EB 3A 1E EB CD 20 9C EB CD 20 EB CD 20 60
+ep_only = true
+
+[.BJFnt v1.3]
+signature = 60 06 FC 1E 07 BE 6A 04 68 10
+ep_only = true
+
+[32Lite v0.03a]
+signature = 60 B9 ?? BA ?? BE ?? 02 38 40 4E 75 FA 8B C2 8A 18 32 DF C0
+ep_only = true
+
+[AcidCrypt]
+signature = BE 02 38 40 4E 75 FA 8B C2 8A 18 32 DF C0
+ep_only = true
+
+[AcidCrypt]
+signature = 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 07 20 40 87 DD 6A 04 68 10 68 02 6A FF 95 46 23 40
+ep_only = true
+
+[Alloy v1.x.2000]
+signature = 52 31 C0 E8 FF FF FF
+ep_only = true
+
+[APatch GUI v1.1]
+signature = 60 E8 5D 81 ED 92 1A 44 B8 8C 1A 44 03 C5 2B 85 CD 1D 44 89 85 D9 1D 44 80 BD C4 1D
+ep_only = true
+
+[ASPack v1.00b]
+signature = 60 E8 5D 81 ED D2 2A 44 B8 CC 2A 44 03 C5 2B 85 A5 2E 44 89 85 B1 2E 44 80 BD 9C 2E
+ep_only = true
+
+[ASPack v1.01b]
+signature = 60 E8 5D 81 ED 3E D9 43 B8 38 03 C5 2B 85 0B DE 43 89 85 17 DE 43 80 BD 01 DE 43 75 15 FE 85 01 DE 43 E8 1D E8 79 02 E8 12 03 8B
+ep_only = true
+
+[ASPack v1.02a]
+signature = 60 E8 5D 81 ED 96 78 43 B8 90 78 43 03 C5 2B 85 7D 7C 43 89 85 89 7C 43 80 BD 74 7C
+ep_only = true
+
+[ASPack v1.02b]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED 96 78 43 ?? B8 90 78 43 ?? 03
+ep_only = true
+
+[ASPack v1.02b]
+signature = 60 E8 5D 81 ED AE 98 43 B8 A8 98 43 03 C5 2B 85 18 9D 43 89 85 24 9D 43 80 BD 0E 9D
+ep_only = true
+
+[ASPack v1.03b]
+signature = 60 E8 5D 81 ED CE 3A 44 B8 C8 3A 44 03 C5 2B 85 B5 3E 44 89 85 C1 3E 44 80 BD AC 3E
+ep_only = true
+
+[ASPack v1.03b]
+signature = 60 E8 5D 81 ED B8 03 C5 2B 85 12 9D 89 85 1E 9D 80 BD 08
+ep_only = true
+
+[ASPack v1.04b]
+signature = 75 ??
+ep_only = true
+
+[ASPack v1.05b]
+signature = 90 75 ??
+ep_only = true
+
+[ASPack v1.06b]
+signature = 90 90 75 ??
+ep_only = true
+
+[ASPack v1.06b]
+signature = 90 90 90 75 ??
+ep_only = true
+
+[ASPack v1.06b]
+signature = 60 E8 5D 81 ED EA A8 43 B8 E4 A8 43 03 C5 2B 85 78 AD 43 89 85 84 AD 43 80 BD 6E AD
+ep_only = true
+
+[ASPack v1.061b]
+signature = 60 E8 5D 81 ED B8 03 C5 2B 85 0B DE 89 85 17 DE 80 BD 01
+ep_only = true
+
+[ASPack v1.07b]
+signature = 60 E8 ?? ?? ?? ?? 5D B8 03
+ep_only = true
+
+[ASPack v1.07b (DLL)]
+signature = 90 90 90 75
+ep_only = true
+
+[ASPack v1.07b]
+signature = 90 90 75
+ep_only = true
+
+[ASPack v1.07b]
+signature = 90 75
+ep_only = true
+
+[ASPack v1.07b]
+signature = 90 75 01 FF
+ep_only = true
+
+[ASPack v1.08]
+signature = 90 90 75 01 FF
+ep_only = true
+
+[ASPack v1.08]
+signature = 90 90 90 75 01 FF
+ep_only = true
+
+[ASPack v1.08]
+signature = 90 90 90 75 90
+ep_only = true
+
+[ASPack v1.08.01]
+signature = 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 44 BB 10 44 03 DD 2B
+ep_only = true
+
+[ASPack v1.08.01]
+signature = 90 90 75 90
+ep_only = true
+
+[ASPack v1.08.01]
+signature = 90 75 90
+ep_only = true
+
+[ASPack v1.08.01]
+signature = 60 EB 5D EB FF
+ep_only = true
+
+[ASPack v1.08.01]
+signature = 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 44 ?? BB 10 44 ?? 03 DD 2B
+ep_only = true
+
+[ASPack v1.08.01]
+signature = 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 ED 23 6A 44 ?? BB 10 44 ?? 03 DD 2B 9D
+ep_only = true
+
+[ASPack v1.08.02]
+signature = 60 EB 03 5D FF E5 E8 F8 FF FF FF 81 ED 1B 6A 44 ?? BB 10 6A 44 ?? 03 DD 2B 9D
+ep_only = true
+
+[ASPack v1.08.x]
+signature = 60 E8 ?? ?? ?? ?? 5D BB 03
+ep_only = true
+
+[ASPack v1.08.03]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED 0A 4A 44 ?? BB 04 4A 44 ?? 03
+ep_only = true
+
+[ASPack v1.08.03]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED 0A 4A 44 ?? BB 04 4A 44 ?? 03 DD 2B 9D B1 50 44 ?? 83 BD AC 50 44 ?? ?? 89 9D BB
+ep_only = true
+
+[ASPack v1.08.03]
+signature = 60 E8 41 06 ?? ?? EB
+ep_only = true
+
+[ASPack v1.08.04]
+signature = A8 03 61 75 08 B8 01 C2 0C 68 C3 8B 85 26 04 8D 8D 3B 04 51 50 FF
+ep_only = true
+
+[ASPack v2.xx]
+signature = 60 E8 70 05 ?? ?? EB
+ep_only = true
+
+[ASPack v2.000]
+signature = 60 E8 72 05 ?? ?? EB
+ep_only = true
+
+[ASPack v2.001]
+signature = 60 E8 72 05 ?? ?? EB 33 87 DB
+ep_only = true
+
+[ASPack v2.1]
+signature = 60 E9 3D
+ep_only = true
+
+[ASPack v2.11]
+signature = 60 E8 02 ?? ?? ?? EB 09 5D 55 81 ED 39 39 44 ?? C3 E9 3D
+ep_only = true
+
+[ASPack v2.11b]
+signature = 60 E8 02 ?? ?? ?? EB 09 5D 55 81 ED 39 39 44 ?? C3 E9 59
+ep_only = true
+
+[ASPack v2.11c]
+signature = 60 E8 02 ?? ?? ?? EB 09 5D
+ep_only = true
+
+[ASPack v2.11d]
+signature = 60 E8 03 ?? ?? ?? E9 EB 04 5D 45 55 C3 E8 01 ?? ?? ?? EB 5D BB ED FF FF FF 03 DD 81
+ep_only = true
+
+[ASPack v2.12]
+signature = 60 E8 03 ?? ?? ?? E9 EB 04 5D 45 55 C3 E8
+ep_only = true
+
+[ASPack v2.12]
+signature = A8 03 ?? ?? 61 75 08 B8 01 ?? ?? ?? C2 0C ?? 68 ?? ?? ?? ?? C3 8B 85 26 04 ?? ?? 8D 8D 3B 04 ?? ?? 51 50 FF
+ep_only = true
+
+[ASPack v2.xx]
+signature = 60 ?? ??
+ep_only = true
+
+[Anticrack Software Protector v1.09 (ACProtect)]
+signature = 60 E8 01 ?? ?? ?? ?? ??
+ep_only = true
+
+[Anticrack Software Protector v1.09 (ACProtect)]
+signature = 60 ?? ?? E8 01 ?? ?? ?? 83 04 24 06
+ep_only = true
+
+[Anticrack Software Protector v1.09 (ACProtect)]
+signature = 90
+ep_only = true
+
+[ASProtect vx.x]
+signature = 60 90 5D 03
+ep_only = true
+
+[ASProtect vx.x]
+signature = 60 E8 01 90 5D 81 ED BB 03 DD 2B
+ep_only = true
+
+[ASProtect v1.0]
+signature = 60 E9 04 E9
+ep_only = true
+
+[ASProtect v1.1]
+signature = 60 E9 91 78 79 79 79
+ep_only = true
+
+[ASProtect v1.1 MTE]
+signature = 90 60 E9
+ep_only = true
+
+[ASProtect v1.1 MTEb]
+signature = 90 60 E8 1B E9
+ep_only = true
+
+[ASProtect v1.1 MTEc]
+signature = 60 E9
+ep_only = true
+
+[ASProtect v1.1 BRS]
+signature = 68 01
+ep_only = true
+
+[ASProtect v1.2]
+signature = 68 01 C3 AA ??
+ep_only = true
+
+[ASProtect v1.2x]
+signature = 68 01 ?? E8 01 ?? ?? ?? C3
+ep_only = true
+
+[ASProtect v1.23 RC1]
+signature = 68 01 E8 01 C3
+ep_only = true
+
+[ASProtect v2.1x]
+signature = BB E9 60 9C FC BF B9 F3 AA 9D 61 C3 55 8B
+ep_only = true
+
+[ASPR Stripper v2.x unpacked]
+signature = 55 8B EC 81 C4 E4 FE FF FF 53 56 57 33 C0 89 45 F0 89
+ep_only = true
+
+[Blade Joiner v1.5]
+signature = 60 BD
+ep_only = true
+
+[BopCrypt v1.0]
+signature = 55 8B EC 81 EC 0C 02 56 BE 04 01 8D 85 F8 FE FF FF 56 50 6A FF 15 54 10 40 8A 8D F8 FE FF FF 33 D2 84 C9 8D 85 F8 FE FF FF 74
+ep_only = true
+
+[CExe v1.0a]
+signature = 53 60 BD 8D 45 8D 5D E8
+ep_only = true
+
+[CD-Cops II]
+signature = E9 C5 02 ?? ?? EB 02 83 3D 58 EB 02 FF 1D 5B EB 02 0F C7
+ep_only = true
+
+[CodeCrypt v0.14b]
+signature = E9 31 03 ?? ?? EB 02 83 3D 58 EB 02 FF 1D 5B EB 02 0F C7
+ep_only = true
+
+[CodeCrypt v0.15b]
+signature = E9 2E 03 ?? ?? EB 02 83 3D 58 EB 02 FF 1D 5B EB 02 0F C7
+ep_only = true
+
+[CodeCrypt v0.16b - v0.163b]
+signature = E9 2E 03 ?? ?? EB 02 83 3D 58 EB 02 FF 1D 5B EB 02 0F C7 5F EB 03 FF 1D
+ep_only = true
+
+[CodeCrypt v0.164]
+signature = 43 4F 44 45 2D 4C 4F 43 4B 2E 4F 43
+ep_only = true
+
+[Code-Lock vx.x]
+signature = 83 EC 10 53 56 57 E8 C4
+ep_only = true
+
+[CodeSafe v2.0]
+signature = CC 90 90 EB 0B 01 50 51 52 53 54 61 33 61 2D 35 CA D1 07 52 D1 A1
+ep_only = true
+
+[CopyControl v3.03]
+signature = 55 8B EC 81 EC 20 02 ?? ?? 53 56 57 6A ?? FF 15 18 61 40 ?? 68 ?? 70 40 ?? 89 45 08 FF 15 14 61 40 ?? 85 C0 74 27 6A ?? A1 ?? 20 40 ?? 50 FF 15 3C 61 40 ?? 8B F0 6A 06 56 FF 15 38 61 40 ??
+ep_only = true
+
+[CreateInstall Stub vx.x]
+signature = 55 E8 5D 83 ED 06 8B C5 55 60 89 AD 2B
+ep_only = true
+
+[Crunch/PE]
+signature = 55 E8 5D 83 ED 06 8B C5 55 60 89 AD 2B 85 89 85 80 BD 75 09 C6
+ep_only = true
+
+[Crunch/PE v1.0.x.x]
+signature = 55 E8 5D 83 ED 06 8B C5 55 60 89 AD 2B 85 89 85 55 BB 03 DD 53 64 67 FF 36 64 67 89
+ep_only = true
+
+[Crunch/PE v2.0.x.x]
+signature = EB 10 55 E8 5D 81 ED 18 8B C5 55 60 9C 2B 85 89 85 FF
+ep_only = true
+
+[Crunch/PE v3.0.x.x]
+signature = EB
+ep_only = true
+
+[Crunch v4.0]
+signature = E8 58 83 E8 05 50 5F 57 8B F7 81 EF 83 C6 39 BA 8B DF B9 0B 8B
+ep_only = true
+
+[CrypKey v5 - v6]
+signature = E8 B8 E8 90 02 83 F8 75 07 6A E8 FF 15 49 8F 40 A9 80 74
+ep_only = true
+
+[CrypWrap vx.x]
+signature = 6A 04 68 ?? 10 ?? ?? FF 35 9C 14 40 ?? 6A ?? FF 15 38 10 40 ?? A3 FC 10 40 ?? 97 BE ?? 20 40 ?? E8 71 ?? ?? ?? 3B 05 9C 14 40 ?? 75 61 6A ?? 6A 20 6A 02 6A ?? 6A 03 68 ?? ?? ?? C0 68 94 10
+ep_only = true
+
+[CICompress v1.0]
+signature = 90 61 BE ?? 10 42 ?? 8D BE ?? ?? FE FF C7 87 C0 20 02 ?? F9 89 C7 6A 57 83 CD FF EB 0E 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 ?? ?? ?? 01 DB 75 07 8B 1E
+ep_only = true
+
+[CipherWall Self-Extrator/Decryptor (GUI) v1.5]
+signature = 90 61 BE ?? 10 42 ?? 8D BE ?? ?? FE FF C7 87 C0 20 02 ?? 0B 6E 5B 9B 57 83 CD FF EB 0E 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 ?? ?? ?? 01 DB 75 07 8B 1E
+ep_only = true
+
+[CipherWall Self-Extrator/Decryptor (Console) v1.5]
+signature = 60 60 9C 8C C9 32 C9 E3 0C 52 0F 01 4C 24 FE 5A 83 C2 0C 8B 1A 9D
+ep_only = true
+
+[DAEMON Protect v0.6.7]
+signature = BE 01 40 ?? 6A 05 59 80 7E 07 ?? 74 11 8B
+ep_only = true
+
+[DEF v1.0]
+signature = 55 57 56 52 51 53 E8 ?? ?? ?? ?? 5D 8B D5 81 ED 23 35
+ep_only = true
+
+[Ding Boy's PE-lock v0.07]
+signature = 55 57 56 52 51 53 E8 ?? ?? ?? ?? 5D 8B D5 81 ED 0D 39
+ep_only = true
+
+[Ding Boy's PE-lock Phantasm v0.8]
+signature = 55 57 56 52 51 53 66 81 C3 EB 02 EB FC 66 81 C3 EB 02 EB
+ep_only = true
+
+[Ding Boy's PE-lock Phantasm v1.0 / v1.1]
+signature = 9C 55 57 56 52 51 53 9C FA E8 ?? ?? ?? ?? 5D 81 ED 5B 53 40 ??
+ep_only = true
+
+[Ding Boy's PE-lock Phantasm v1.5b3]
+signature = 9C 55 57 56 52 51 53 9C FA E8 5D 81 ED 5B 53 40 B0 E8 5E 83 C6 11 B9 27 30 06 46 49 75
+ep_only = true
+
+[DBPE v1.53]
+signature = 9C 6A 10 73 0B EB 02 C1 51 E8 06 C4 11 73 F7 5B CD 83 C4 04 EB 02 99 EB FF 0C 24 71 01 E8 79 E0 7A 01 75 83 C4 04 9D EB 01 75 68 5F 20 40 E8 B0 EF FF FF 72 03 73 01 75
+ep_only = true
+
+[DBPE v2.10]
+signature = EB 20 9C 55 57 56 52 51 53 9C E8 5D 81 ED EB 58 75 73 65 72 33 32 2E
+ep_only = true
+
+[DBPE v2.10]
+signature = EB 20 40 9C 55 57 56 52 51 53 9C E8 5D 81 ED 9C 6A 10 73 0B EB 02 C1 51
+ep_only = true
+
+[DBPE v2.33]
+signature = EB 20 40 9C 55 57 56 52 51 53 9C E8 5D 81
+ep_only = true
+
+[DBPE vx.xx]
+signature = 60 E8 5D 8B FD 81 ED 2B B9 81 EF 83 BD 0F
+ep_only = true
+
+[DxPack 1.0]
+signature = 50 83 C0 17 8B F0 97 33 C0 33 C9 B1 24 AC 86 C4 AC AA 86 C4 AA E2 F6 ?? B8 40 ?? 03 ?? 3C 40 D2 33 8B 66 14 50 70 8B 8D 34 02 44 8B 18 10 48 70 03 BA 0C C0 33 FE 8B 30 AC 30 D0
+ep_only = true
+
+[EP v1.0]
+signature = 6A 60 E9 01
+ep_only = true
+
+[EP v2.0]
+signature = 60 BE ?? B0 42 ?? 8D BE ?? 60 FD FF C7 87 B0 E4 02 ?? 31 3C 4B DF 57 83 CD FF EB 0E 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 ?? ?? ?? 01 DB ?? ?? ??
+ep_only = true
+
+[ExeBundle v3.0 (standard loader)]
+signature = 60 BE ?? F0 40 ?? 8D BE ?? 20 FF FF 57 83 CD FF EB 10 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 ?? ?? ?? 01 DB 75 07 8B 1E 83 EE FC 11 ?? ?? ??
+ep_only = true
+
+[ExeBundle v3.0 (small loader)]
+signature = 65 78 65 73 68 6C 2E 64 6C 6C C0
+ep_only = true
+
+[Exe Shield vx.x]
+signature = EB 06 68 90 1F 06 ?? C3 9C 60 E8 02 ?? ?? ?? 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 3F
+ep_only = true
+
+[Exe Shield v1.7]
+signature = EB 06 68 F4 86 06 ?? C3 9C 60 E8
+ep_only = true
+
+[Exe Shield v2.7]
+signature = EB 06 68 40 85 06 ?? C3 9C 60 E8 02 ?? ?? ?? 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 3F 90 40 ?? 87 DD 8B 85 E6 90 40 ?? 01 85 33 90 40 ?? 66 C7 85 30 90 40 ?? 90 90 01 85 DA 90 40 ??
+ep_only = true
+
+[Exe Shield v2.7b]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED 0B 20 40 ?? B9 EB 08 ?? ?? 8D BD 53 20 40 ?? 8B F7 AC
+ep_only = true
+
+[Exe Shield v2.9]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED FB 1D 40 ?? B9 7B 09 ?? ?? 8B F7
+ep_only = true
+
+[EXE Stealth v1.1]
+signature = EB ?? 60 EB ?? E8 ?? ?? ?? ?? 5D 81 ED D3 26
+ep_only = true
+
+[EXE Stealth v2.7]
+signature = EB ?? 60 EB ?? E8 ?? ?? ?? ?? 5D 81 ED B0 27
+ep_only = true
+
+[EXE Stealth v2.71]
+signature = EB ?? EB 2F 53 68 61 72 65 77 61 72 65 20 2D
+ep_only = true
+
+[EXE Stealth v2.72]
+signature = 3B C0 74 02 81 83 55 3B C0 74 02 81 83 53 3B C9 74 01 BC 02 81 3B DB 74 01 BE 5D 8B D5 81 ED CC 8D
+ep_only = true
+
+[EXE32Pack v1.36]
+signature = 3B C0 74 02 81 83 55 3B C0 74 02 81 83 53 3B C9 74 01 BC 02 81 3B DB 74 01 BE 5D 8B D5 81 ED 4C 8E
+ep_only = true
+
+[EXE32Pack v1.37]
+signature = 3B C0 74 02 81 83 55 3B C0 74 02 81 83 53 3B C9 74 01 BC 02 81 3B DB 74 01 BE 5D 8B D5 81 ED DC 8D
+ep_only = true
+
+[EXE32Pack v1.38]
+signature = 3B C0 74 02 81 83 55 3B C0 74 02 81 83 53 3B C9 74 01 BC 02 81 3B DB 74 01 BE 5D 8B D5 81 ED EC 8D
+ep_only = true
+
+[EXE32Pack v1.39]
+signature = 3B 74 02 81 83 55 3B 74 02 81 53 3B 74 01 02 81 E8 3B 74 01 5D 8B D5 81
+ep_only = true
+
+[EXE32Pack v1.3x]
+signature = E8 24 8B 4C 24 0C C7 01 17 01 C7 81 31 C0 89 41 14 89 41 18 80
+ep_only = true
+
+[EXECryptor v1.3.0.45]
+signature = E8 24 ?? ?? ?? 8B 4C 24 0C C7 01 17 ?? 01 ?? C7 81 31 C0 89 41 14 89 41 18 80
+ep_only = true
+
+[EXECryptor v1.3.0.45]
+signature = E8 24 ?? ?? ?? 8B 4C 24 0C C7 01 17 ?? 01 ?? C7 81 B8 ?? ?? ?? ?? ?? 31 C0 89 41 14 89 41 18
+ep_only = true
+
+[EXECryptor v1.4.0.1]
+signature = E8 24 8B 4C 24 0C C7 01 17 01 C7 81 B8 31 C0 89 41 14 89 41 18 80 A1 C1 FE C3 31 C0 64 FF 30 64 89 20 CC
+ep_only = true
+
+[EXECryptor v1.5.1.x]
+signature = E8 24 8B 4C 24 0C C7 01 17 01 C7 81 B8 31 C0 89
+ep_only = true
+
+[EXECryptor vx.x.x.x]
+signature = 68 ?? 10 40 ?? 68 04 01 ?? ?? E8 39 03 ?? ?? 05 ?? 10 40 C6 ?? 5C 68 68 6A ??
+ep_only = true
+
+[EXEJoiner v1.0]
+signature = 9C FE 03 60 BE 41 8D BE 10 FF FF 57 83 CD FF EB
+ep_only = true
+
+[ExeSmasher vx.x]
+signature = E9 19 32 ?? ?? E9 7C 2A ?? ?? E9 19 24 ?? ?? E9 FF 23 ?? ?? E9 1E 2E ?? ?? E9 88 2E ?? ?? E9
+ep_only = true
+
+[EZIP v1.0]
+signature = BB D0 01 40 ?? BF ?? 10 40 ?? BE 53 E8 0A ?? ?? ?? 02 D2 75 05 8A 16 46 12 D2 C3 FC B2 80 A4 6A 02
+ep_only = true
+
+[FSG v1.0]
+signature = BB D0 01 40 BF 10 40 BE FC B2 80 8A 06 46 88 07 47 02 D2 75 05 8A
+ep_only = true
+
+[FSG v1.1]
+signature = 4B 45 52 4E 45 4C 33 32 2E 64 6C 6C ?? ?? 4C 6F 61 64 4C 69 62 72 61 72 79 41 ?? ?? 47 65 74 50 72 6F 63 41 64 64 72 65 73
+ep_only = true
+
+[FSG v1.2]
+signature = BB D0 01 40 ?? BF ?? 10 40 ?? BE 53 E8 0A ?? ?? ?? 02 D2 75 05 8A 16 46 12 D2 C3 B2 80 A4 6A 02 5B FF 14 24 73 F7 33 C9 FF 14 24 73 18 33 C0 FF 14 24 73 21 B3 02 41 B0 10 FF 14
+ep_only = true
+
+[FSG v1.3]
+signature = BB D0 01 40 ?? BF ?? 10 40 ?? BE 53 BB B2 80 A4 B6 80 FF D3 73 F9 33
+ep_only = true
+
+[FSG v1.31]
+signature = BE A4 01 40 ?? AD 93 AD 97 AD 56 96 B2 80 A4 B6 80 FF 13
+ep_only = true
+
+[FSG v1.33]
+signature = 89 25 A8 11 40 ?? BF ?? 31 C0 B9 ?? 29 F9 FC F3
+ep_only = true
+
+[Feokt]
+signature = 55 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? BE ?? ?? ?? 03 F5 BA ?? ?? 2B D5 8B DD 33 C0 AC 3C ?? 74 3D 3C 01 74 0E 3C 02 74 0E 3C 03 74 0D 03 D8 29 13 EB E7 66 AD EB F6 AD EB F3 AC 0F
+ep_only = true
+
+[FixupPak v1.20]
+signature = 83 EC 0C 53 56 57 E8 24
+ep_only = true
+
+[Gleam v1.00]
+signature = 55 8B EC 83 C4 F0 60 E8 51 FF FF
+ep_only = true
+
+[Guardant Stealth aka Novex Dongle]
+signature = 50 53 51 52 57 56 8B 75 1C 8B 3E 8B 5D 08 8A FB 03 5D 10 8B 45 0C 8B 4D 14 8B 55 18 80 FF
+ep_only = true
+
+[Hasp dongle (Alladin)]
+signature = 10 02 D0 51 0F ??
+ep_only = true
+
+[Hasp 4 envelope dongle (Alladin)]
+signature = 5C 5C 2E 5C 48 41 52 44 4C 4F 43 4B 2E 56 58 44 ?? ?? ?? ?? 5C 5C 2E 5C 46 45 6E 74 65 44 65
+ep_only = true
+
+[Hardlock dongle (Alladin)]
+signature = 49 6E 6E 6F 53 65 74 75 70 4C 64 72 57 69 6E 64 6F 77 ?? ?? 53 54 41 54 49
+ep_only = true
+
+[Inno Setup Module]
+signature = 49 6E 6E
+ep_only = true
+
+[Inno Setup Module]
+signature = 55 8B EC 83 C4 C0 53 56 57 33 C0 89 45 F0 89 45 C4 89 45 C0 E8 A7 7F FF FF E8 FA 92 FF FF E8 F1 B3 FF FF 33
+ep_only = true
+
+[Inno Setup Module v1.09a]
+signature = 55 8B EC 83 C4 C0 53 56 57 33 C0 89 45 F0 89 45 EC 89 45 C0 E8 5B 73 FF FF E8 D6 87 FF FF E8 C5 A9 FF FF E8
+ep_only = true
+
+[Inno Setup Module v1.2.9]
+signature = 55 8B EC 81 EC 14 ?? ?? 53 56 57 6A ?? FF 15 68 FF 15 85 C0 74
+ep_only = true
+
+[Install Stub 32-bit]
+signature = 60 E8 5D 8B D5 81 ED 2B 95 81 EA 06 89 95 83 BD
+ep_only = true
+
+[JDPack]
+signature = EB 66 87
+ep_only = true
+
+[kryptor 3]
+signature = E8 03 E9 EB 6C 58 40 FF
+ep_only = true
+
+[kryptor 5]
+signature = E8 03 E9 EB 68 58 33 D2 74 02 E9 E9 40 42 75
+ep_only = true
+
+[kryptor 6]
+signature = EB 6A 87
+ep_only = true
+
+[kryptor 8]
+signature = 60 E8 5E B9 2B C0 02 04 0E D3 C0 49 79 F8 41 8D 7E 2C 33 46 66
+ep_only = true
+
+[kryptor 9]
+signature = 8B 0C 24 E9 0A 7C 01 AD 42 40 BD BE 9D 7A
+ep_only = true
+
+[Krypton v0.2]
+signature = 8B 0C 24 E9 C0 8D 01 C1 3A 6E CA 5D 7E 79 6D B3 64 5A 71
+ep_only = true
+
+[Krypton v0.3]
+signature = 54 E8 5D 8B C5 81 ED 61 34 2B 85 60 37 83 E8
+ep_only = true
+
+[Krypton v0.4]
+signature = 54 E8 5D 8B C5 81 ED 71 44 2B 85 64 60 EB 43
+ep_only = true
+
+[Krypton v0.5]
+signature = E8 5D 81 ED 64 A1 30 84 C0 74 64 A1 20 0B C0
+ep_only = true
+
+[KGCrypt vx.x]
+signature = 60 66 9C BB 80 B3 ?? 10 40 ?? 90 4B 83 FB FF 75 F3 66 9D
+ep_only = true
+
+[LameCrypt v1.0]
+signature = 54 E8 ?? ?? ?? ?? 5D 8B C5 81 ED F6 73 40 ?? 2B 85 87 75 40 ?? 83 E8
+ep_only = true
+
+[LTC v1.3]
+signature = 2C E8 5D 8B C5 81 ED F6 73 2B 85 83 E8 06 89
+ep_only = true
+
+[Lockless Intro Pack]
+signature = 55 89 E5 53 83 EC 48 55 B8 FF FF FF FF 50 50 68 E0 3E 42 ?? 64 FF 35 ?? ?? ?? ?? 64 89 25 ?? ?? ?? ?? 68 C0 69 44 ?? E8 E4 80 FF FF 59 E8 4E 29 ?? ?? E8 C9 0D ?? ?? 85 C0 75 08 6A FF E8 6E
+ep_only = true
+
+[LaunchAnywhere v4.0.0.1]
+signature = 55 8B EC 83 EC 44 56 FF 15 10 ?? 01 8B F0 8A 06 3C 22 75 14 8A 46 01 46 84 C0 74 04 3C 22 75 F4 80 3E 22 75 0D EB 0A 3C
+ep_only = true
+
+[Microsoft CAB SFX module]
+signature = 55 8B EC 83 EC 44 56 FF 15 94 13 42 ?? 8B F0 B1 22 8A 06 3A C1 75 13 8A 46 01 46 3A C1 74 04 84 C0 75 F4 38 0E 75 0D 46 EB 0A 3C 20 7E
+ep_only = true
+
+[Macromedia Windows Flash Projector/Player v3.0]
+signature = 83 EC 44 56 FF 15 24 41 43 ?? 8B F0 8A 06 3C 22 75 1C 8A 46 01 46 3C 22 74 0C 84 C0 74 08 8A 46 01 46 3C 22 75 F4 80 3E 22 75 0F 46 EB
+ep_only = true
+
+[Macromedia Windows Flash Projector/Player v4.0]
+signature = 83 EC 44 56 FF 15 70 61 44 ?? 8B F0 8A 06 3C 22 75 1C 8A 46 01 46 3C 22 74 0C 84 C0 74 08 8A 46 01 46 3C 22 75 F4 80 3E 22 75 0F 46 EB 0C 3C 20 7E 08 8A 46 01 46 3C 20 7F F8 8A 06 84 C0 74
+ep_only = true
+
+[Macromedia Windows Flash Projector/Player v5.0]
+signature = 83 EC 44 56 FF 15 24 81 49 ?? 8B F0 8A 06 3C 22 75 1C 8A 46 01 46 3C 22 74 0C 84 C0 74 08 8A 46 01 46 3C 22 75 F4 80 3E 22 75 0F 46 EB
+ep_only = true
+
+[Macromedia Windows Flash Projector/Player v6.0]
+signature = E9
+ep_only = true
+
+[Neolite v2.0]
+signature = 9E 37 ?? ?? 48 6F 4C
+ep_only = true
+
+[NeoLite vx.x]
+signature = E9 9B ?? ?? ??
+ep_only = true
+
+[NeoLite v1.0]
+signature = 8B 44 24 04 8D 54 24 FC 23 05 E8 FF 35 50 FF
+ep_only = true
+
+[NeoLite v1.0]
+signature = E9
+ep_only = true
+
+[NeoLite v2.00]
+signature = 8B 44 24 04 23 05 50 E8 83 C4 04 FE 05 0B C0
+ep_only = true
+
+[NeoLite v2.00]
+signature = E9 4E 65 6F 4C 69 74
+ep_only = true
+
+[NeoLite v2.0]
+signature = 8D 50 12 2B C9 B1 1E 8A 02 34 77 88 02 42 E2 F7 C8
+ep_only = true
+
+[NFO v1.0]
+signature = 60 9C 8D
+ep_only = true
+
+[NFO v1.x modified]
+signature = EB 01 9A E8 3D ?? ?? ?? EB 01 9A E8 EB 01 ?? ?? EB 01 9A E8 2C 04 ?? ?? EB
+ep_only = true
+
+[NoodleCrypt v2.0]
+signature = 55 8B EC 83 EC 2C 53 56 33 F6 57 56 89 75 DC 89 75 F4 BB A4 9E 40 ?? FF 15 60 70 40 ?? BF C0 B2 40 ?? 68 04 01 ?? ?? 57 50 A3 AC B2 40 ?? FF 15 4C 70 40 ?? 56 56 6A 03 56 6A 01 68 ?? ?? ??
+ep_only = true
+
+[Nullsoft Install System v1.xx]
+signature = 83 EC 0C 53 56 57 FF 15 20 71 40 ?? 05 E8 03 ?? ?? BE 60 FD 41 ?? 89 44 24 10 B3 20 FF 15 28 70 40 ?? 68 ?? 04 ?? ?? FF 15 28 71 40 ?? 50 56 FF 15 08 71 40 ?? 80 3D 60 FD 41 ?? 22 75 08 80
+ep_only = true
+
+[Nullsoft Install System v1.xx]
+signature = 83 EC 0C 53 56 57 FF 15 2C 81
+ep_only = true
+
+[Nullsoft Install System v1.98]
+signature = 83 EC 0C 53 55 56 57 FF 15 70 40 ?? 8B 35 92 40 ?? 05 E8 03 ?? ?? 89 44 24 14 B3 20 FF 15 2C 70 40 ?? BF ?? 04 ?? ?? 68 ?? 57 FF 15 40 ?? 57 FF
+ep_only = true
+
+[Nullsoft Install System v2.0b2, v2.0b3]
+signature = 55 8B EC 81 EC ?? ?? 56 57 6A BE 59 8D
+ep_only = true
+
+[Nullsoft PIMP Install System v1.3x]
+signature = 83 EC 5C 53 55 56 57 FF
+ep_only = true
+
+[Nullsoft PIMP Install System v1.x]
+signature = FF 60 FF CA FF ?? BA DC 0D E0 40 ?? 50 ?? 60 ?? 70 ??
+ep_only = true
+
+[NX PE Packer v1.0]
+signature = EB 02 E8 E7
+ep_only = true
+
+[Obsidium v1.1.1.1]
+signature = E8 AB
+ep_only = true
+
+[Obsidium v1.0.0.59 Final]
+signature = E8 AF
+ep_only = true
+
+[Obsidium v1.0.0.61]
+signature = E8 47
+ep_only = true
+
+[Obsidium vx.x.x.x]
+signature = E9 5D 01 ?? ?? CE D1 CE CE 0D 0A 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 2D 0D 0A 2D 20 4F 52 69 45
+ep_only = true
+
+[ORiEN v2.11 (DEMO)]
+signature = 60 E8 01 E8 83 C4 04 E8 01 E9 5D 81 ED D3 22 40 E8 04 02 E8 EB 08 EB 02 CD 20 FF 24 24 9A 66 BE 47
+ep_only = true
+
+[Pack Master v1.0]
+signature = 53 51 52 56 57 55 E8 ?? ?? ?? ?? 5D 8B CD 81 ED 33 30 40 2B 8D EE 32 40 ?? 83 E9 0B 89 8D F2 32 40 80 BD D1 32 40 01 0F
+ep_only = true
+
+[PC PE Encryptor Alpha preview]
+signature = 66 ?? 66
+ep_only = true
+
+[PEEncrypt v4.0b (JunkCode)]
+signature = E8 5B 83 EB 05 EB 04 52 4E 44 21 EB 02 CD 20
+ep_only = true
+
+[PE Crypt v1.00/v1.01]
+signature = E8 5B 83 EB 05 EB 04 52 4E
+ep_only = true
+
+[PE Crypt v1.02]
+signature = E8 ?? ?? ?? ?? 5B 83 EB 52 4E 44
+ep_only = true
+
+[PE Crypt32 v1.02]
+signature = E8 ?? ?? ?? ?? 5B 83 EB 05 EB 04 52 4E 44 21 EB 02 CD 20
+ep_only = true
+
+[PE Crypt32 (Console v1.0, v1.01, v1.02)]
+signature = 8B 04 24 9C 60 E8 5D 81 ED 0A 45 40 80 BD 67 44 40 0F 85
+ep_only = true
+
+[PE Intro v1.0]
+signature = EB 03 CD 20 EB EB 01 EB 1E EB 01 EB EB 02 CD 20 9C EB 03
+ep_only = true
+
+[PE Lock NT v2.01]
+signature = EB 02 C7 85 1E EB 03 CD 20 EB EB 01 EB 9C EB 01 EB EB 02
+ep_only = true
+
+[PE Lock NT v2.02c]
+signature = EB 02 C7 85 1E EB 03 CD 20 C7 9C EB 02 69 B1 60 EB 02 EB
+ep_only = true
+
+[PE Lock NT v2.03]
+signature = EB CD CD EB EB EB EB CD E8 E9 50
+ep_only = true
+
+[PE Lock v1.06]
+signature = 60 E8 5D 83 ED 06 80 BD E0 04 01 0F 84
+ep_only = true
+
+[PE Pack v0.99]
+signature = 74
+ep_only = true
+
+[PE Pack v1.0]
+signature = FC 8B 35 70 01 40 83 EE 40 6A 40 68 30
+ep_only = true
+
+[PE Packer]
+signature = E8 04 8B EC 5D C3 33 C0 5D 8B FD 81 ED 33 26 40 81 EF 83 EF 05 89 AD 88 27 40 8D 9D 07 29 40 8D B5 62 28 40 46
+ep_only = true
+
+[PE Password v0.2 SMT/SMF]
+signature = 52 51 55 57 64 67 A1 30 ?? 85 C0 78 0D E8 58 83 C0 07 C6
+ep_only = true
+
+[PE Protect v0.9]
+signature = E8 E8 01 60 01 AD B3 27 40
+ep_only = true
+
+[PC Shrinker v0.20]
+signature = BD 01 AD 55 39 40 8D B5 35 39
+ep_only = true
+
+[PC Shrinker v0.29]
+signature = BD 01 AD E3 38 40 FF B5 DF 38
+ep_only = true
+
+[PC Shrinker v0.45]
+signature = 9C 60 BD 01 AD 54 3A 40 FF B5 50 3A 40 6A 40 FF 95 88 3A 40 50 50 2D 89
+ep_only = true
+
+[PC Shrinker v0.71]
+signature = 55 50 E8 5D EB 01 E3 60 E8 03 D2 EB 0B 58 EB 01 48 40 EB
+ep_only = true
+
+[PC-Guard v3.03d, v3.05d]
+signature = FC 55 50 E8 ?? ?? ?? ?? 5D EB
+ep_only = true
+
+[PC-Guard v4.05d, v4.10d, v4.15d]
+signature = FC 55 50 E8 ?? ?? ?? ?? 5D 60 E8 03 ?? ?? ?? 83 EB 0E EB 01 0C 58 EB 01 35 40 EB 01 36 FF E0 0B 61 B8 30 D2 40 ?? EB 01 E3 60 E8 03 ?? ?? ?? D2 EB 0B 58 EB 01 48 40 EB 01 35 FF E0 E7 61 2B
+ep_only = true
+
+[PC-Guard v5.00d]
+signature = 60 E8 ?? ?? ?? ?? 5D EB
+ep_only = true
+
+[PE-Crypter]
+signature = 60 E8 01 ?? ?? ?? E8 83 C4 04 E8 01 ?? ?? ?? E9 5D 81 ED D3 22 40 ?? E8 04 02 ?? ?? E8 EB 08 EB 02 CD 20 FF 24 24 9A 66 BE 47
+ep_only = true
+
+[Pack Master v1.0]
+signature = 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 40 87 DD 6A 04 68 10 68 02 6A FF
+ep_only = true
+
+[PEBundle v0.2 - v2.0x]
+signature = 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 40 87 DD 01 AD 01
+ep_only = true
+
+[PEBundle v2.0b5 - v2.3]
+signature = 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 40 87 DD 83
+ep_only = true
+
+[PEBundle v2.44]
+signature = EB 06 68 C3 9C 60 BD B9 02 B0 90 8D BD F3 AA 01 AD FF
+ep_only = true
+
+[PECompact v0.90 - v0.92]
+signature = EB 06 68 C3 9C 60 E8 5D 55 58 81 ED 2B 85 01 85 50 B9
+ep_only = true
+
+[PECompact v0.94]
+signature = EB 06 68 C3 9C 60 E8 5D 55 5B 81 ED 8B 85 01 85 66 C7
+ep_only = true
+
+[PECompact v0.971 - v0.976]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB A0 86 40 87 DD 8B 85 2A
+ep_only = true
+
+[PECompact v0.977]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 24 88 40 87 DD 8B 85 A9
+ep_only = true
+
+[PECompact v0.978]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 49 87 40 87 DD 8B 85 CE
+ep_only = true
+
+[PECompact v0.978.1]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB D1 84 40 87 DD 8B 85 56
+ep_only = true
+
+[PECompact v0.978.2]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB D7 84 40 87 DD 8B 85 5C
+ep_only = true
+
+[PECompact v0.98]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 2F 85 40 87 DD 8B 85 B4
+ep_only = true
+
+[PECompact v0.99]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB C4 84 40 87 DD 8B 85 49
+ep_only = true
+
+[PECompact v1.00]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 28 63 40 87 DD 8B 85 AD
+ep_only = true
+
+[PECompact v1.10b1]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 60 40 87 DD 8B 85 94
+ep_only = true
+
+[PECompact v1.10b2]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 60 40 87 DD 8B 85 95 60 40 01 85 03 60 40 66 C7 85 60 40 90 90 BB
+ep_only = true
+
+[PECompact v1.10b3]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 60 40 87 DD 8B 85 95 60 40 01 85 03 60 40 66 C7 85 60 40 90 90 BB
+ep_only = true
+
+[PECompact v1.10b4]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 60 40 87 DD 8B 85 95 60 40 01 85 03 60 40 66 C7 85 60 40 90 90 BB
+ep_only = true
+
+[PECompact v1.10b5]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 60 ?? 87 DD 8B 85 9A 60 40 01 85 03 60 40 66 C7 85 60 40 90 90 01 85 92 60 40
+ep_only = true
+
+[PECompact v1.10b6]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 60 40 87 DD 8B 85 9A 60 40 01 85 03 60 40 66 C7 85 60 40 90 90 01 85 92 60 40
+ep_only = true
+
+[PECompact v1.10b7]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 70 40 87 DD 8B 85 9A 70
+ep_only = true
+
+[PECompact v1.20 - v1.20.1]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 70 40 87 DD 8B 85 A6 70 40 01 85 03 70 40 66 C7 85 70 40 90 90 01 85 9E 70 40
+ep_only = true
+
+[PECompact v1.22]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 70 40 87 DD 8B 85 A6 70 40 01 85 03 70 40 66 C7 85 70 40 90 90 01 85 9E 70 40 BB
+ep_only = true
+
+[PECompact v1.23b3 - v1.24.1]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 70 40 87 DD 8B 85 A6 70 40 01 85 03 70 40 66 C7 85 70 40 90 90 01 85 9E 70 40 BB
+ep_only = true
+
+[PECompact v1.24.2 - v1.24.3]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 70 40 87 DD 8B 85 A6 70 40 01 85 03 70 40 66 C7 85 70 40 90 90 01 85 9E 70 40 BB
+ep_only = true
+
+[PECompact v1.25]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 70 40 87 DD 8B 85 A6 70 40 01 85 03 70 40 66 C7 85 70 40 90 90 01 85 9E 70 40 BB
+ep_only = true
+
+[PECompact v1.26b1 - v1.26b2]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 80 40 87 DD 8B 85 A6 80 40 01 85 03 80 40 66 C7 85 ?? 80 40 90 90 01 85 9E 80 40
+ep_only = true
+
+[PECompact v1.33]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 80 40 87 DD 8B 85 A6 80 40 01 85 03 80 40 66 C7 85 ?? 80 40 90 90 01 85 9E 80
+ep_only = true
+
+[PECompact v1.34 - v1.40b1]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F A0 40 87 DD 8B 85 A6 A0 40 01 85 03 A0 40 66 C7 85 A0 40 90 90 01 85 9E A0 40
+ep_only = true
+
+[PECompact v1.40b2 - v1.40b4]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F A0 40 87 DD 8B 85 A6 A0 40 01 85 03 A0 40 66 C7 85 A0 40 90 90 01 85 9E A0 40
+ep_only = true
+
+[PECompact v1.40b5 - v1.40b6]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F A0 40 87 DD 8B 85 A6 A0 40 01 85 03 A0 40 66 C7 85 A0 40 90 90 01 85 9E A0 40
+ep_only = true
+
+[PECompact v1.40 - v1.45]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F A0 40 87 DD 8B 85 A6 A0 40 01 85 03 A0 40 66 C7 85 A0 40 90 90 01 85 9E A0 40
+ep_only = true
+
+[PECompact v1.46]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F A0 40 87 DD 8B 85 A6 A0 40 01 85 03 A0 40 66 C7 85 A0 40 90 90 01 85 9E A0 40
+ep_only = true
+
+[PECompact v1.47 - v1.50]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 80 40 87 DD 8B 85 A2 80 40 01 85 03 80 40 66 C7 85 80 40 90 90 01 85 9E 80 40
+ep_only = true
+
+[PECompact v1.55]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 0F 90 40 87 DD 8B 85 A2 90 40 01 85 03 90 40 66 C7 85 90 40 90 90 01 85 9E 90 40
+ep_only = true
+
+[PECompact v1.56]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 3F 80 40 87 DD 8B 85 D2 80 40 01 85 33 80 40 66 C7 85 80 40 90 90 01 85 CE 80 40
+ep_only = true
+
+[PECompact v1.60 - v1.65]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 3F 90 40 87 DD 8B 85 E6 90 40 01 85 33 90 40 66 C7 85 90 40 90 90 01 85 DA 90 40
+ep_only = true
+
+[PECompact v1.66]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 3F 90 40 87 DD 8B 85 E6 90 40 01 85 33 90 40 66 C7 85 90 40 90 90 01 85 DA 90 40 01 85 DE 90 40 01
+ep_only = true
+
+[PECompact v1.67]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC 81 EB 3F 90 40 87 DD 8B 85 E6 90 40 01 85 33 90 40 66 C7 85 90 40 90 90 01 85 DA 90 40 01 85 DE 90 40 01
+ep_only = true
+
+[PECompact v1.68 - v1.84]
+signature = EB 06 68 C3 9C 60 E8 02 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC
+ep_only = true
+
+[PECompact v1.4x+]
+signature = 33 C0 8B C4 83 C0 04 93 8B E3 8B 5B FC
+ep_only = true
+
+[PECompact v1.84]
+signature = B8 50 64 FF 35 ?? ?? ?? ?? 64 89 25 ?? ?? ?? ?? 33 C0 89
+ep_only = true
+
+[PECompact v2.x]
+signature = 53 51 52 56 57 55 E8 ?? ?? ?? ?? 5D 8B D5 81 ED A2 30 40 ?? 2B 95 91 33 40 ?? 81 EA 0B ?? ?? ?? 89 95 9A 33 40 ?? 80 BD 99 33 40 ?? ??
+ep_only = true
+
+[PE Diminisher v0.1]
+signature = 5D 8B D5 81 ED A2 30 40 2B 95 91 33 40 81 EA 0B 89 95 9A 33 40 80 BD
+ep_only = true
+
+[PE Diminisher v0.1]
+signature = 60 9C BE ?? 10 40 ?? 8B FE B9 28 03 ?? ?? BB 78 56 34 12 AD 33 C3 AB E2 FA 9D
+ep_only = true
+
+[PEncrypt v1.0]
+signature = E8 ?? ?? ?? ?? 5D 81 ED 05 10 40 ?? 8D B5 24 10 40 ?? 8B FE B9 0F ?? ?? ?? BB AD 33 C3 E2
+ep_only = true
+
+[PEncrypt v3.0]
+signature = E9 ?? F0 0F
+ep_only = true
+
+[PEncrypt v3.1]
+signature = B8 93 ?? 55 50 67 64 FF 36 ?? ?? 67 64 89 26 ?? ?? BD 4B 48 43 42 B8 04 ?? ?? ?? CC 3C 04 75 04 90 90 C3 90 67 64 8F 06 ?? ?? 58 5D BB ?? ?? 40 ?? 33 C9 33
+ep_only = true
+
+[PEnguinCrypt v1.0]
+signature = 60 E8 ?? ?? ?? ?? 5D B9 80 31 15 41 81
+ep_only = true
+
+[PENightMare v1.3]
+signature = 60 E9 EF 40 03 A7 07 8F 07 1C 37 5D 43 A7 04 B9 2C
+ep_only = true
+
+[PENightMare 2 Beta]
+signature = 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90
+ep_only = true
+
+[PENinja]
+signature = 5D 8B C5 81 ED B2 2C 40 ?? 2B 85 94 3E 40 ?? 2D 71 02 ?? ?? 89 85 98 3E 40 ?? 0F B6 B5 9C 3E 40 ?? 8B
+ep_only = true
+
+[PENinja modified]
+signature = 60 9C BE 8B FE B9 BB 44 52 4F 4C AD 33
+ep_only = true
+
+[PEMangle]
+signature = E8 B9 1B 01
+ep_only = true
+
+[PESHiELD v0.1b MTE]
+signature = 60 E8 41 4E 41 4B 49 4E 5D 83 ED 06 EB 02 EA
+ep_only = true
+
+[PESHiELD v0.2 / v0.2b / v0.2b2]
+signature = 60 E8
+ep_only = true
+
+[PESHiELD v0.25]
+signature = 5D 83 ED 06 EB 02 EA 04
+ep_only = true
+
+[PESHiELD v0.251]
+signature = B8 B9 83 F9 ?? 7E 06 80 30 40 E2 F5 E9
+ep_only = true
+
+[PEShit]
+signature = EB 01 68 60 E8 ?? ?? ?? ?? 8B 1C 24 83 C3 12 81 2B E8 B1 06 ?? FE 4B FD 82 2C 24 72 C8 46 ?? 0B E4 74 9E 75 01 C7 81 73 04 D7 7A F7 2F 81 73 19 77 ?? 43 B7 F6 C3 6B B7 ?? ?? F9 FF E3 C9 C2
+ep_only = true
+
+[PE Spin v0.b]
+signature = 66 9C 60 E8 CA 03 04 05 06 07
+ep_only = true
+
+[PEtite v1.2]
+signature = 66 9C 60 50 8D 88 F0 8D 90 04 16 8B DC 8B E1 68 53 50 80 04 24 08 50 80 04 24
+ep_only = true
+
+[PEtite v1.3]
+signature = 66 9C 60 50 8B D8 03 ?? 68 54 BC ?? ?? 6A ?? FF 50 14 8B
+ep_only = true
+
+[PEtite v1.4]
+signature = 66 9C 60 50 8B D8 03 68 54 BC 6A FF 50 14 8B
+ep_only = true
+
+[PEtite v1.4]
+signature = B8 66 9C 60 50 8B D8 03 68 54 BC 6A FF 50 18 8B CC 8D A0 54 BC 8B C3 8D 90 E0 15
+ep_only = true
+
+[PEtite v2.0]
+signature = B8 6A 68 64 FF 35 64 89 25 66 9C 60
+ep_only = true
+
+[PEtite v2.1]
+signature = B8 68 64 FF 35 64 89 25 66 9C 60
+ep_only = true
+
+[PEtite v2.2]
+signature = B8 66 9C 60
+ep_only = true
+
+[PEtite vx.x]
+signature = E9 F5 0D 0A C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4 C4
+ep_only = true
+
+[PEX v0.99]
+signature = 60 E8 01 83 C4 04 E8 01 5D
+ep_only = true
+
+[PEX v0.99]
+signature = 55 8B EC A1 85 C0 74 09 B8 01 ?? ?? ?? 5D C2 0C ?? 8B 45 0C 57 56 53 8B 5D
+ep_only = true
+
+[PKLITE32 v1.1]
+signature = 68 68 68 ?? ?? ?? ??
+ep_only = true
+
+[PKLITE32 v1.1]
+signature = 50 4B 4C 49 54 45 33 32 20 43 6F 70 79 72 69 67 68 74 20
+ep_only = true
+
+[PKLITE32 v1.1]
+signature = 53 E8 ?? ?? ?? ?? 5B 8B C3
+ep_only = true
+
+[Private EXE v2.0a]
+signature = EB CD CD EB EB EB EB CD E8 E9 50
+ep_only = true
+
+[Private EXE v2.0a]
+signature = E8 58 83 D8 05 89 C3 81 C3 8B 43 64
+ep_only = true
+
+[Program Protector XP v1.0]
+signature = 50 60 29 C0 64 FF 30 E8 5D 83 ED 3C 89 E8 89 A5 14 2B 85 1C 89 85 1C 8D 85 27 03 50 8B 85 C0 0F 85 C0 8D BD 5B 03 8D B5 43
+ep_only = true
+
+[Protection Plus vx.x]
+signature = 40 20 FF ?? ?? ?? ?? ?? ?? ?? BE ?? 60 40 ?? 8D BE ?? B0 FF
+ep_only = true
+
+[RatPacker (Glue) stub]
+signature = 83 3D 55 8B EC 56 57 75 65 68 ?? 01 E8 E6 FF FF 83 C4 04 8B 75 08 A3 85 F6 74 1D 68
+ep_only = true
+
+[Shrinker v3.2]
+signature = 83 3D ?? ?? 55 8B EC 56 57 75 65 68 ?? 01 ?? ??
+ep_only = true
+
+[Shrinker v3.3]
+signature = 83 3D B4 55 8B EC 56 57 75 6B 68 ?? 01 ?? ?? E8 0B ?? ?? 83 C4 04 8B 75 08 A3 B4 85 F6 74 23 83 7D 0C 03 77 1D 68
+ep_only = true
+
+[Shrinker v3.4]
+signature = 58 60 8B E8 55 33 F6 68 48 01 E8 49 01
+ep_only = true
+
+[Shrink Wrap v1.4]
+signature = 55 8B EC 83 C4 F0 53 56 57 33 C0 89 45 F0 B8 CC 3A 40 E8 E0 FC FF FF 33 C0 55 68 EA 3C 40 64 FF 30 64 89 20 6A 68 80 6A 03 6A 6A 01
+ep_only = true
+
+[SecuPack v1.5]
+signature = 60 B8 B8 8A 14 08 80 F2 88 14 08 41 83 F9 75
+ep_only = true
+
+[SmokesCrypt v1.2]
+signature = 74 07 75 05 19 32 67 E8 E8 74 1F 75 1D E8 68 39 44 CD 59 9C 50 74 0A 75 08 E8 59 C2 04 55 8B EC E8 F4 FF FF FF 56 57 53 78 0F 79 0D E8 34 99 47 49 34 33 EF 31 34 52 47 23 68 A2 AF 47
+ep_only = true
+
+[Soft Defender v1.0 - v1.1]
+signature = 55 8B EC 83 EC 53 56 57 E9
+ep_only = true
+
+[SoftSentry v2.11]
+signature = 55 8B EC 83 EC 53 56 57 E9 B0
+ep_only = true
+
+[SoftSentry v3.0]
+signature = 52 53 51 56 57 55 E8 5D 81 ED 36 E8 01 60 BA E8
+ep_only = true
+
+[SoftWrap]
+signature = 9C 60 8B 44 24 24 E8 5D 81 ED 50 E8 ED 02 8C C0 0F
+ep_only = true
+
+[Spalsher v1.0 - v3.0]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED 06 ?? ?? ?? 89 AD 8C 01 ?? ?? 8B C5 2B 85 FE 75 ?? ?? 89 85 3E
+ep_only = true
+
+[Special EXE Password Protector v1.0]
+signature = 55 57 51 53 E8 5D 8B C5 81 ED 2B 85 83 E8 09 89 85 0F
+ep_only = true
+
+[SPEC b2]
+signature = 5B 53 50 45 43 5D E8 5D 8B C5 81 ED 41 24 40 2B 85 89 26 40 83 E8 0B 89 85 8D 26 40 0F B6 B5 91 26 40 8B
+ep_only = true
+
+[SPEC b3]
+signature = BA ?? FF E2 BA ?? B8 89 02 83 C2 03 B8 89 02 83 C2 FD FF
+ep_only = true
+
+[Stealth PE v1.1]
+signature = 55 57 56 52 51 53 E8 5D 8B D5 81 ED 63 3A 40 2B 95 C2 3A 40 83 EA 0B 89 95 CB 3A 40 8D B5 CA 3A 40 0F B6
+ep_only = true
+
+[Stone's PE Encryptor v1.0]
+signature = 55 57 56 52 51 53 E8 5D 8B D5 81 ED 97 3B 40 2B 95 2D 3C 40 83 EA 0B 89 95 36 3C 40 01 95 24 3C 40 01 95
+ep_only = true
+
+[Stone's PE Encryptor v1.13]
+signature = 53 51 52 56 57 55 E8 5D 81 ED 42 30 40 FF 95 32 35 40 B8 37 30 40 03 C5 2B 85 1B 34 40 89 85 27 34 40
+ep_only = true
+
+[Stone's PE Encryptor v2.0]
+signature = 60 E8 5D 81 ED 06 64 A0
+ep_only = true
+
+[SVK-Protector v1.11]
+signature = 60 EB 03 C7 84 E8 EB 03 C7 84 9A E8 ?? ?? ?? ?? 5D 81 ED 10 ?? ?? ?? EB 03 C7 84 E9 64 A0 23 ?? ?? ??
+ep_only = true
+
+[SVK-Protector v1.051]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED 06 ?? ?? ?? EB 05 B8 06 36 42 ?? 64 A0
+ep_only = true
+
+[SVK-Protector v1.32]
+signature = 64 8B 05 55 8B EC 6A FF 68 40 68 40 50 64 89 25 83 EC 08 50 53 56 57 89 65 E8 C7 45
+ep_only = true
+
+[Symantec Visual Cafe v3.0]
+signature = E8 ?? ?? ?? ?? 5D 8B C5 2D ?? 50 81 ED 05 ?? ?? ?? 8B C5 2B 85 03 0F ?? ?? 89 85 03 0F ?? ?? 8B F0 03 B5 0B 0F ?? ?? 8B F8 03 BD 07 0F ?? ?? 83 7F 0C ?? 74 2B 56 57 8B 7F 10 03 F8
+ep_only = true
+
+[SOFTWrapper for Win9x/NT (Evaluation Version)]
+signature = 6A ?? E8 ?? ?? A3
+ep_only = true
+
+[TASM / MASM]
+signature = E9 E5 E2 FF
+ep_only = true
+
+[tElock v1.00]
+signature = 66 8B C0 8D 24 24 EB 01 EB 60 EB 01 EB 9C E8 ?? ?? ?? ?? 5E 83 C6 50 8B FE 68 78 01 59 EB 01 EB AC 54 E8 03 5C EB
+ep_only = true
+
+[tElock v0.41x]
+signature = C1 EE ?? 66 8B C9 EB 01 EB 60 EB 01 EB 9C E8 ?? ?? ?? ?? 5E 83 C6 52 8B FE 68 79 01 59 EB 01 EB AC 54 E8 03 5C EB
+ep_only = true
+
+[tElock v0.42]
+signature = C1 EE ?? 66 8B C9 EB 01 EB 60 EB 01 EB 9C E8 ?? ?? ?? ?? 5E 83 C6 5E 8B FE 68 79 01 59 EB 01 EB AC 54 E8 03 5C EB
+ep_only = true
+
+[tElock v0.51]
+signature = C1 EE ?? 66 8B C9 EB 01 EB 60 EB 01 EB 9C E8 ?? ?? ?? ?? 5E 83 C6 8B FE 68 79 01 59 EB
+ep_only = true
+
+[tElock v0.4x - v0.5x]
+signature = E9 ?? ?? ?? ?? 60 E8 ?? ?? ?? ?? 58 83 C0
+ep_only = true
+
+[tElock v0.60]
+signature = 60 E8 BD 10 ?? ?? C3 83 E2 ?? F9 75 FA
+ep_only = true
+
+[tElock v0.70]
+signature = 60 E8 ED 10 ?? ?? C3
+ep_only = true
+
+[tElock v0.71]
+signature = 60 E8 44 11 ?? ?? C3
+ep_only = true
+
+[tElock v0.71b2]
+signature = 60 E8 48 11 ?? ?? C3
+ep_only = true
+
+[tElock v0.71b7]
+signature = 60 E8 F9 11 ?? ?? C3
+ep_only = true
+
+[tElock v0.80]
+signature = 60 E8 ?? ?? C3
+ep_only = true
+
+[tElock v0.7x - v0.84]
+signature = 60 E8 02 ?? ?? ?? CD 20 E8 ?? ?? ?? ?? 5E 2B C9 58 74
+ep_only = true
+
+[tElock v0.85f]
+signature = E8 02 ?? ?? ?? E8 ?? E8 ?? ?? ?? ?? 5E
+ep_only = true
+
+[tElock v0.90]
+signature = E9 7E E9 FF
+ep_only = true
+
+[tElock v0.92a]
+signature = E9 D5 E4 FF
+ep_only = true
+
+[tElock v0.95]
+signature = E9 59 E4 FF
+ep_only = true
+
+[tElock v0.96]
+signature = E9 25 E4 FF FF ?? ?? ??
+ep_only = true
+
+[tElock v0.98]
+signature = E9 25 E4 FF
+ep_only = true
+
+[tElock v0.98b1]
+signature = E9 1B E4 FF
+ep_only = true
+
+[tElock v0.98b2]
+signature = E9 FF FF ?? ?? ?? ?? ?? ?? ??
+ep_only = true
+
+[tElock v0.99]
+signature = 50 E8 58 25 F0 FF FF 8B C8 83 C1 60 51 83 C0 40 83 EA 06 52 FF 20 9D
+ep_only = true
+
+[The Guard Library]
+signature = B8 EF BE AD DE 50 6A FF 15 10 19 40 E9 AD FF FF
+ep_only = true
+
+[Thinstall vx.x]
+signature = 60 E8 5D 81 ED E8 0D
+ep_only = true
+
+[UG2002 Cruncher v0.3b3]
+signature = 60 E8 ?? ?? ?? ?? 58 83 E8 3D 50 8D B8 FF 57 8D B0 D8 01 83 CD FF 31 DB 01 DB 75 07 8B 1E 83 EE FC 11 DB 73 0B 8A 06 46 88 07 47 EB EB
+ep_only = true
+
+[UPX v0.51]
+signature = 60 E8 ?? ?? ?? ?? 58 83 E8 3D 50 8D B8 FF 57 8D B0
+ep_only = true
+
+[UPX v0.60 - v0.61]
+signature = 60 E8 ?? ?? ?? ?? 58 83 E8 3D 50 8D B8 FF 57 66 81 87 8D B0 F0 01 83 CD FF 31 DB 90 90 90 EB 08 90 90 8A 06 46 88 07 47 01 DB 75
+ep_only = true
+
+[UPX v0.62]
+signature = 60 E8 ?? ?? ?? ?? 58 83 E8 3D 50 8D B8 FF 57 66 81 87 8D B0 EC 01 83 CD FF 31 DB EB 07 90 8A 06 46 88 07 47 01 DB 75
+ep_only = true
+
+[UPX v0.70]
+signature = 60 E8 ?? ?? ?? ?? 83 CD FF 31 DB 5E 8D BE FA FF 57 66 81 87 81 C6 B3 01 EB 0A 8A 06 46 88 07 47 01 DB 75
+ep_only = true
+
+[UPX v0.71 - v0.72]
+signature = 80 7C 24 08 01 0F 85 ?? 60 BE 8D BE 57 83 CD
+ep_only = true
+
+[UPX v0.89.6 - v1.02 / v1.05 - v1.22 DLL]
+signature = 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB
+ep_only = true
+
+[UPX v0.80 - v0.84]
+signature = 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB
+ep_only = true
+
+[UPX v0.89.6 - v1.02 / v1.05 - v1.22]
+signature = 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 8A 07 72 EB B8 01 ?? ?? ?? 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0
+ep_only = true
+
+[UPX v1.03 - v1.04]
+signature = 60 BE 8D BE C7 87 57 83 CD FF EB 0E 8A 06 46 88 07 47 01 DB 75 07
+ep_only = true
+
+[UPX v0.89.6 - v1.02 / v1.05 - v1.22 (Delphi) stub]
+signature = 01 DB 07 8B 1E 83 EE FC 11 DB ED B8 01 ?? ?? ?? 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77
+ep_only = true
+
+[UPX v0.81 - v0.84 Modified]
+signature = 01 DB 07 8B 1E 83 EE FC 11 DB ED B8 01 ?? ?? ?? 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73
+ep_only = true
+
+[UPX v0.89.6 - v1.02 / v1.05 - v1.22 Modified]
+signature = 01 DB 07 8B 1E 83 EE FC 11 DB 8A 07 EB B8 01 ?? ?? ?? 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73
+ep_only = true
+
+[UPX v1.03 - v1.04 Modified]
+signature = 01 DB 07 8B 1E 83 EE FC 11 DB ED B8 01 ?? ?? ?? 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73
+ep_only = true
+
+[UPX Alternative stub]
+signature = 50 BE 8D BE 57 83
+ep_only = true
+
+[UPX Modifier v0.1x]
+signature = 79 07 0F B7 07 47 50 47 B9 57 48 F2 AE 55 FF 96 84 ?? ?? 09 C0 74 07 89 03 83 C3 04 EB D8 FF 96 88 ?? ?? 61 E9
+ep_only = true
+
+[UPX Modified stub]
+signature = EB EC 8A 06 46 88 07 47 01 DB 75
+ep_only = true
+
+[UPX Protector v1.0x]
+signature = B8 B9 33 D2 EB 01 0F 56 EB 01 0F E8 03 ?? ?? ?? EB 01 0F EB 01 0F 5E EB
+ep_only = true
+
+[UPX + ECLiPSE layer]
+signature = 90 61 BE 8D BE 57 83 CD
+ep_only = true
+
+[UPX-Scrambler RC v1.x]
+signature = B8 43 ?? B9 15 ?? ?? ?? 80 34 08 E2 FA E9 D6 FF FF
+ep_only = true
+
+[UPXShit 0.06]
+signature = 8C E0 0B C5 8C E0 0B C4 03 C5 74 ?? 74 ?? 8B
+ep_only = true
+
+[VBOX v4.2 MTE]
+signature = 0B C0 0B C0 0B C0 0B C0 0B C0 0B C0 0B C0 0B
+ep_only = true
+
+[VBOX v4.3 MTE]
+signature = 36 3E 26 8A C0 60
+ep_only = true
+
+[VOB ProtectCD 5]
+signature = 5F 81 EF BE 40 8B 87 03 C6 57 56 8C A7 FF 10 89 87 5E
+ep_only = true
+
+[VOB ProtectCD]
+signature = 9C 55 E8 EC ?? ?? ?? 87 D5 5D 60 87 D5 80 BD 15 27 40 ??
+ep_only = true
+
+[Virogen Crypt v0.75]
+signature = 33 C0 8B B8 ?? 8B 90 04 85 FF 74 1B 33 C9 50 EB 0C 8A 04 39 C0 C8 04 34 1B 88 04 39 41 3B CA 72 F0
+ep_only = true
+
+[Winkript v1.0]
+signature = FF 15 ?? B1 22 38 08 74 02 B1 20 40 80 38 ?? 74 10 38 08 74 06 40 80 38 ?? 75 F6 80 38 ?? 74 01 40 33 C9 FF
+ep_only = true
+
+[WinZip 32-bit SFX v6.x module]
+signature = 53 FF 15 ?? B3 22 38 18 74 03 80 C3 FE 8A 48 01 40 33 D2 3A CA 74 0A 3A CB 74 06 8A 48 01 40 EB F2 38 10 74 01 40 FF
+ep_only = true
+
+[WinZip 32-bit SFX v8.x module]
+signature = E9 ?? ?? ?? ?? ?? ?? 90 90 90 ?? ??
+ep_only = true
+
+[WinRAR 32-bit SFX Module]
+signature = 55 8B EC 81 EC 04 ?? ?? 53 56 57 6A FF 15
+ep_only = true
+
+[Wise Installer Stub]
+signature = 55 8B EC 81 EC 78 05 ?? ?? 53 56 BE 04 01 ?? ?? 57 8D 85 94 FD FF FF 56 33 DB 50 53 FF 15 34 20 40 ?? 8D 85 94 FD FF FF 56 50 8D 85 94 FD FF FF 50 FF 15 30 20 40 ?? 8B 3D 2C 20 40 ?? 53 53
+ep_only = true
+
+[Wise Installer Stub]
+signature = 55 8B EC 81 EC 40 0F ?? ?? 53 56 57 6A 04 FF 15 F4 30 40 ?? FF 15 74 30 40 ?? 8A 08 89 45 E8 80 F9 22 75 48 8A 48 01 40 89 45 E8 33 F6 84 C9 74 0E 80 F9 22 74 09 8A 48 01 40 89 45 E8 EB EE
+ep_only = true
+
+[Wise Installer Stub v1.10.1029.1]
+signature = 53 55 8B E8 33 DB EB 60 0D 0A 0D 0A 57 57 50 61 63 6B 33
+ep_only = true
+
+[WWPack32 v1.00, v1.11, v1.12, v1.20]
+signature = 53 55 8B E8 33 DB EB
+ep_only = true
+
+[WWPack32 v1.x]
+signature = E8 ?? ?? ?? ?? 5D 8B CD 81 ED 7A 29 40 ?? 89 AD 0F 6D
+ep_only = true
+
+[Xtreme-Protector v1.05]
+signature = B8 ?? B9 75 ?? 50 51 E8 05 ?? ?? ?? E9 4A 01 ?? ?? 60 8B 74 24 24 8B 7C 24 28 FC B2 80 8A 06 46 88 07 47 BB 02 ?? ?? ?? 02 D2 75 05 8A 16 46 12 D2 73 EA 02 D2 75 05 8A 16 46
+ep_only = true
+
+[Xtreme-Protector v1.06]
+signature = 60 8B F0 33 DB 83 C3 01 83 C0
+ep_only = true
+
+[XCR v0.11]
+signature = 60 9C E8 8B DD 5D 81 ED 89
+ep_only = true
+
+[XCR v0.12]
+signature = 93 71 08 8B D8 78 E2 9C 33 C3 60 79 CE E8 01 83 C4 04 E8 AB FF FF FF 2B E8 03 C5 FF
+ep_only = true
+
+[XCR v0.13]
+signature = E8 5D 8B CD 81 ED 7A 29 40 89 AD 0F 6D
+ep_only = true
+
+[X-PEOR v0.99b]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED E7 1A 40 ?? E8 A1 ?? ?? ?? E8 D1 ?? ?? ?? E8 85 01 ?? ?? F7
+ep_only = true
+
+[y0da's Crypter v1.0]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED 8A 1C 40 ?? B9 9E ?? ?? ?? 8D BD 4C 23 40 ?? 8B F7
+ep_only = true
+
+[y0da's Crypter v1.1]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED F3 1D 40 ?? B9 7B 09 ?? ?? 8D BD 3B 1E 40 ?? 8B F7
+ep_only = true
+
+[y0da's Crypter v1.2]
+signature = 60 E8 ?? ?? ?? ?? 5D 81 ED B9 ?? ?? 8D BD 8B F7
+ep_only = true
+
+[y0da's Crypter v1.x / Modified]
+signature = E9 12 ?? ?? ?? E9 FB FF FF FF C3 68 64 FF
+ep_only = true
+
+[ZCode Win32/PE Protector v1.01]
+signature = 53 51 56 E8 ?? ?? ?? ?? 5B 81 EB 08 10 ?? ?? 8D B3 34 10 ?? ?? B9 F3 03 ?? ?? BA 63 17 2A EE 31 16 83 C6
+ep_only = true
+
+[*** Protector v1.1.11 (DDeM->PE Engine v0.9, DDeM->CI v0.9.2)]
+signature = E9 ?? ?? E9 ?? ?? E9 ?? ??
+ep_only = true
+
+[eXpressor v1.0x / v1.1x]
+signature = 55 8B EC 81 EC D4 01 ?? ?? 53 56 57 EB 0C 45 78 50 72 2D 76 2E 31 2E 32 2E
+ep_only = true
+
+[eXpressor v1.2x]
+signature = 55 8B EC 83 EC 64 53 56 57 EB 0C 45 78 50 72 2D 76 2E 31 2E 33 2E
+ep_only = true
+
+[eXpressor v1.3x]
+signature = 55 8B EC 83 EC 58 53 56 57 83 65 DC ?? F3 EB 0C 65 58 50 72 2D 76 2E 31 2E 34
+ep_only = true
+
