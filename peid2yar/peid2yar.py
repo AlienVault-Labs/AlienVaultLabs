@@ -13,6 +13,7 @@ import os
 if len(sys.argv) != 3:
 	print "PEiD 2 Yar Help - AlienVault Labs"
 	print "Usage: %s userdb.txt output.yar" % (sys.argv[0])
+	print "Please! Use signatures sanitizer first."
 	sys.exit()
 
 peid_file = sys.argv[1]
@@ -31,21 +32,30 @@ f.close()
 m1 = re.compile("^\[(\* )?(?P<signame>.+)\]$")
 m2 = re.compile("^signature = (?P<signature>.+)$")
 m3 = re.compile("^ep_only = (?P<ep>true|false)$")
+m4 = re.compile("^([\dABCDEF]{2} ?|[\dABCDEF]\? ?|\?\? ?)+$") # Signature bytes validator for Yara
 
+count = 0
 for i in data.split("\n"):
 	ln = i.rstrip()
+	count += 1
 	m = m1.match(ln)
 	if m:
 		signame = "_" + m.group("signame").replace("+", "p").replace(" ", "_") + "_"
 		for z in signame:
 			if z.isalnum() == False and z != "_":
 				signame = signame.replace(z, "")
-		if signame not in peid_rules.keys():
-			peid_rules[signame] = [{"desc": m.group("signame").replace("\"", "")}, []]
+		if len(signame) > 100:
+			signame = signame[0:99]
+		signdesc = m.group("signame").replace("\"", "")
+		skip = True
 		continue
 	m = m2.match(ln)
 	if m:
 		signature = m.group("signature")
+		m = m4.match(signature)
+		if not m:
+			print "Signature [%s] malformed at line %s, skipping" % (signdesc, count)
+			continue
 		tmp = []
 		cont = False
 		for z in signature.split(" "):
@@ -55,10 +65,13 @@ for i in data.split("\n"):
 				cont = True
 				tmp.append(z)
 		signature = " ".join(tmp)
+		skip = False
 		continue
 	m = m3.match(ln)
-	if m:
+	if m and skip != True:
 		ep = m.group("ep")
+		if signame not in peid_rules.keys():
+			peid_rules[signame] = [{"desc": signdesc}, []]
 		peid_rules[signame][1].append({"signature": signature, "ep": ep})
 
 f = open(output_file, "w")
