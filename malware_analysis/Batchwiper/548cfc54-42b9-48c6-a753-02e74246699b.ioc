@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="548cfc54-42b9-48c6-a753-02e74246699b" last-modified="2012-12-17T11:42:47" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>Batchwiper</short_description>
+  <description>http://www.certcc.ir/index.php?name=news&amp;file=article&amp;sid=2293</description>
+  <authored_by>Jaime.Blasco</authored_by>
+  <authored_date>2012-12-17T10:26:50</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR">
+      <IndicatorItem id="e2fbd5b7-75a8-450a-859a-6c224999228e" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">f3dd76477e16e26571f8c64a7fd4a97b</Content>
+      </IndicatorItem>
+      <IndicatorItem id="31f4e185-ec3f-41ea-9638-0bf0be2635f8" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">fa0b300e671f73b3b0f7f415ccbe9d41</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1f14c692-1cbe-464c-bfb9-26a4da4d45e4" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">c4cd216112cbc5b8c046934843c579f6</Content>
+      </IndicatorItem>
+      <IndicatorItem id="45858a26-3ba3-413f-b387-b7b03f03ebf8" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">ea7ed6b50a9f7b31caeea372a327bd37</Content>
+      </IndicatorItem>
+      <IndicatorItem id="21ebfe0a-262c-4d8c-94b5-7528bbd7bccf" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">b7117b5d8281acd56648c9d08fadf630</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1f7ab591-9704-4bc7-8d4a-447886739fcf" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\system32\SLEEP.EXE</Content>
+      </IndicatorItem>
+      <IndicatorItem id="96fbfa18-cfef-4b8b-b9cb-024ea397f91f" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\system32\jucheck.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6bf5f82a-0db0-4d62-a921-c2db324dd837" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\system32\juboot.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="614de467-fdeb-425b-a73d-d2997d455431" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Start Menu\Programs\Startup\GrooveMonitor.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="48a8ca1c-0ca5-44bd-8b85-00c79f2e8ddd" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Local Settings\Temp\1.tmp\juboot.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="828f4ee0-e357-47b3-a250-733c0d3f9fbf" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Local Settings\Temp\4.tmp\jucheck.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9e6a0409-cec2-4721-a8f9-3f0a824fced0" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Local Settings\Temp\1.tmp\WmiPrv.bat</Content>
+      </IndicatorItem>
+      <Indicator operator="OR" id="b7461bda-b0e9-462b-9290-fdc871c87121">
+        <IndicatorItem id="9d315232-1ac9-48da-b969-f11c79ca6ea4" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Path" type="mir" />
+          <Content type="string">SOFTWARE\Microsoft\Windows\CurrentVersion\Run</Content>
+        </IndicatorItem>
+        <IndicatorItem id="15cb01bb-4ac0-4d19-9a0b-f373f4e31114" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Text" type="mir" />
+          <Content type="string">jucheck.exe</Content>
+        </IndicatorItem>
+      </Indicator>
+    </Indicator>
+  </definition>
+</ioc>
