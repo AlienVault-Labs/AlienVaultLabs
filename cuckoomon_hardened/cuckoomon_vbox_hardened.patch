@@ -1,0 +1,163 @@
+diff --git a/cuckoomon.c b/cuckoomon.c
+index bdc0cd9..6161e51 100644
+--- a/cuckoomon.c
++++ b/cuckoomon.c
+@@ -55,6 +55,8 @@ static hook_t g_hooks[] = {
+     HOOK(ntdll, NtOpenFile),
+     HOOK(ntdll, NtReadFile),
+     HOOK(ntdll, NtWriteFile),
++    HOOK(kernel32, GetFileAttributesA),
++    HOOK(kernel32, GetFileAttributesExA),
+ 
+     // lowest variant of MoveFile()
+     HOOK(kernel32, MoveFileWithProgressW),
+diff --git a/hook_file.c b/hook_file.c
+index 9323eb6..89b1ae6 100644
+--- a/hook_file.c
++++ b/hook_file.c
+@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ #include <stdio.h>
+ #include <windows.h>
++#include <string.h>
+ #include "hooking.h"
+ #include "ntapi.h"
+ #include "log.h"
+@@ -185,3 +186,38 @@ HOOKDEF(BOOL, WINAPI, CreateDirectoryExW,
+     LOQ("u", "DirectoryName", lpNewDirectory);
+     return ret;
+ }
++
++/* Hardened */
++HOOKDEF(DWORD, WINAPI, GetFileAttributesA,
++  __in      LPCTSTR lpFileName
++) {
++    BOOL ret;
++    if (strstr(lpFileName, "VBox") != NULL) {
++        ret = INVALID_FILE_ATTRIBUTES;
++        LOQ("s", "Hardening", "Faked GetFileAttributesA return");
++    }
++    else {
++        ret = Old_GetFileAttributesA(lpFileName);
++    }
++    LOQ("s", "GetFileAttributesA", lpFileName);
++    return ret;
++}
++
++/* Hardened */
++HOOKDEF(DWORD, WINAPI, GetFileAttributesExA,
++  __in      LPCTSTR lpFileName,
++  __in      GET_FILEEX_INFO_LEVELS fInfoLevelId,
++  __out     LPVOID lpFileInformation
++) {
++    BOOL ret;
++    if (strstr(lpFileName, "VBox") != NULL) {
++        ret = 0;
++        LOQ("s", "Hardening", "Faked GetFileAttributesExA return");
++    }
++    else {
++        ret = Old_GetFileAttributesExA(lpFileName, fInfoLevelId,
++            lpFileInformation);
++    }
++    LOQ("s", "GetFileAttributesExA", lpFileName);
++    return ret;
++}
+diff --git a/hook_reg.c b/hook_reg.c
+index 0752b9c..da5e816 100644
+--- a/hook_reg.c
++++ b/hook_reg.c
+@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ #include <stdio.h>
+ #include <windows.h>
++#include <string.h>
+ #include "hooking.h"
+ #include "ntapi.h"
+ #include "log.h"
+@@ -25,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ static IS_SUCCESS_LONGREG();
+ static const char *module_name = "registry";
+ 
++/* Hardened */
+ HOOKDEF(LONG, WINAPI, RegOpenKeyExA,
+   __in        HKEY hKey,
+   __in_opt    LPCTSTR lpSubKey,
+@@ -32,8 +34,19 @@ HOOKDEF(LONG, WINAPI, RegOpenKeyExA,
+   __in        REGSAM samDesired,
+   __out       PHKEY phkResult
+ ) {
+-    LONG ret = Old_RegOpenKeyExA(hKey, lpSubKey, ulOptions, samDesired,
+-        phkResult);
++    LONG ret;
++    if (strstr(lpSubKey, "VirtualBox") != NULL) {
++        ret = 1;
++        LOQ("s", "Hardening", "Faked RegOpenKeyExA return");
++    }
++    else if (strstr(lpSubKey, "ControlSet") != NULL) {
++        ret = 1;
++        LOQ("s", "Hardening", "Faked RegOpenKeyExA return");
++    }
++    else {
++        ret = Old_RegOpenKeyExA(hKey, lpSubKey, ulOptions, samDesired,
++            phkResult);
++    }
+     LOQ("psP", "Registry", hKey, "SubKey", lpSubKey, "Handle", phkResult);
+     return ret;
+ }
+@@ -216,6 +229,7 @@ HOOKDEF(LONG, WINAPI, RegSetValueExW,
+     return ret;
+ }
+ 
++/* Hardened */
+ HOOKDEF(LONG, WINAPI, RegQueryValueExA,
+   __in         HKEY hKey,
+   __in_opt     LPCTSTR lpValueName,
+@@ -224,8 +238,25 @@ HOOKDEF(LONG, WINAPI, RegQueryValueExA,
+   __out_opt    LPBYTE lpData,
+   __inout_opt  LPDWORD lpcbData
+ ) {
+-    LONG ret = Old_RegQueryValueExA(hKey, lpValueName, lpReserved, lpType,
+-        lpData, lpcbData);
++    LONG ret;
++    /* HARDWARE\\Description\\System "SystemBiosVersion" */
++    if (strstr(lpValueName, "SystemBiosVersion") != NULL) {
++        ret = ERROR_SUCCESS;
++        LOQ("s", "Hardening", "Faked RegQueryValueExA return");
++    }
++    /* HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0 "Identifier" */
++    else if (strstr(lpValueName, "Identifier") != NULL) {
++        ret = ERROR_SUCCESS;
++        LOQ("s", "Hardening", "Faked RegQueryValueExA return");
++    }
++    else if (strstr(lpValueName, "ProductId") != NULL) {
++        ret = ERROR_SUCCESS;
++        LOQ("s", "Hardening", "Faked RegQueryValueExA return");
++    }
++    else {
++        ret = Old_RegQueryValueExA(hKey, lpValueName, lpReserved, lpType,
++            lpData, lpcbData);
++    }
+     LOQ("psLB", "Handle", hKey, "ValueName", lpValueName,
+         "Type", lpType, "Buffer", lpcbData, lpData);
+     return ret;
+diff --git a/hooks.h b/hooks.h
+index 035f047..e40f190 100644
+--- a/hooks.h
++++ b/hooks.h
+@@ -93,6 +93,16 @@ extern HOOKDEF(BOOL, WINAPI, CreateDirectoryExW,
+   __in_opt  LPSECURITY_ATTRIBUTES lpSecurityAttributes
+ );
+ 
++extern HOOKDEF(DWORD, WINAPI, GetFileAttributesA,
++  __in      LPCTSTR lpFileName
++);
++
++extern HOOKDEF(DWORD, WINAPI, GetFileAttributesExA,
++  __in      LPCTSTR lpFileName,
++  __in      GET_FILEEX_INFO_LEVELS fInfoLevelId,
++  __out     LPVOID lpFileInformation
++);
++
+ //
+ // Registry Hooks
+ //
