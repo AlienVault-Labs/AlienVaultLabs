@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="41bd34a6-dff3-435b-8a98-6ec7ab0d222b" last-modified="2012-12-29T13:55:40" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>Council on Foreign Relations Payload</short_description>
+  <description>Indicators of compromise for the payload delivered by the Council on Foreign Relations waterhole attack using an Internet Explorer 8 zeroday</description>
+  <authored_by>Jaime Blasco</authored_by>
+  <authored_date>2012-12-29T13:07:26</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="f41247d9-f4e6-49df-96e1-0257429b642e">
+      <IndicatorItem id="6c252807-f5d9-492e-82a9-62a9a8b61df7" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">39F206C64E2621AF0E7983C44E5E91FB</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7411960a-ded6-4948-9f95-1fddfece8481" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Temp\qwea.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="18c8ef9e-7cc7-4386-a635-aa975c0b9dcb" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Temp\flowertep.jpg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cbf28c1f-7dfd-46ec-ba90-831b25fa94e6" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Program Files\Common Files\DirectDB.exe</Content>
+      </IndicatorItem>
+      <Indicator operator="AND" id="f91a1a89-8b7b-4889-bee8-bcfa857dc311">
+        <IndicatorItem id="1bbfbcb8-3355-4446-a600-8bf3c30ce8f4" condition="contains">
+          <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+          <Content type="string">xsainfo[1].jpg</Content>
+        </IndicatorItem>
+        <IndicatorItem id="38a54662-58ba-4ec6-8471-46a2d1221966" condition="contains">
+          <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+          <Content type="string">\Temporary Internet Files\</Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="0a4f5218-49d3-476f-9ac9-957fac2ff899">
+        <IndicatorItem id="7d966793-bd94-4d5d-8064-f7c98cbe9cf7" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Path" type="mir" />
+          <Content type="string">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\{785942B1-FDE7-447F-A9C2-694A721FA120}</Content>
+        </IndicatorItem>
+        <IndicatorItem id="194a0cd6-22e1-4c33-aacf-b5417ed7dc53" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Text" type="mir" />
+          <Content type="string">DirectDB.exe</Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="8a2983ce-ed71-4b44-9552-6b2cba414468">
+        <IndicatorItem id="938c221e-363d-461d-be7c-2821175ecab5" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Path" type="mir" />
+          <Content type="string">HKEY_LOCAL_MACHINE\SOFTWARE\STS</Content>
+        </IndicatorItem>
+        <IndicatorItem id="6f7d398e-f45b-4c5d-81de-74ad829ec87a" condition="is">
+          <Context document="RegistryItem" search="RegistryItem/ValueName" type="mir" />
+          <Content type="string">nck</Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="a7f212a7-fc40-4f56-8f17-f9d95efd4ddc">
+        <IndicatorItem id="69f49dee-39f9-4600-a559-1d03806d2dbb" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="mir" />
+          <Content type="string">&amp;!#@&amp;</Content>
+        </IndicatorItem>
+        <Indicator operator="OR" id="782368e2-3293-44cc-b5da-a7f19866834e">
+          <IndicatorItem id="ccd8aab8-b945-4389-9bac-4d8d141c84d1" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/name" type="mir" />
+            <Content type="string">DirectDB.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="e8008e7e-4260-4088-a63c-dc0f3572cf3a" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="mir" />
+            <Content type="string">iexplore.exe</Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+    </Indicator>
+  </definition>
+</ioc>
