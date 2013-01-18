@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="48290d24-834c-4097-abc5-4f22d3bd8f3c" last-modified="2013-01-17T16:32:15" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>Red October Campaign</short_description>
+  <description>On January 14, 2013, Kaspersky Lab announced the discovery of ?Red October?, a high-level cyber-espionage campaign that has been active for over 5 years. (https://www.securelist.com/en/blog/785/The_Red_October_Campaign_An_Advanced_Cyber_Espionage_Network_Targeting_Diplomatic_and_Government_Agencies). This campaign has successfully infiltrated computer networks at diplomatic, governmental and scientific research organizations, gathering data and intelligence from mobile devices, computer systems and network equipment. </description>
+  <authored_by>Jaime Blasco, Costin Raiu</authored_by>
+  <authored_date>2013-01-17T11:52:43</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="542d9551-0768-4f18-96fe-9c53303277e7">
+      <IndicatorItem id="6ee5a771-8da3-4d80-b772-7f4169283c56" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">fsmgmtio32.msc</Content>
+      </IndicatorItem>
+      <IndicatorItem id="39539fc2-42a3-4a38-a5fc-4dc1940356bc" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">cfsyn.pcs</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ec996bcd-b8e4-4d31-91ae-d6b8089f2c33" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">frpdhry.hry</Content>
+      </IndicatorItem>
+      <IndicatorItem id="695b0ab3-377f-4bb1-8337-e68591aff5dc" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">ime64ex.ncs</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7e091de9-9492-4856-a88f-a8df6668c854" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">io32.ocx</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9e68caf2-df0d-4aa6-8787-10bc648ffb2e" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">lhafd.gcp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="368a7ce3-2a04-4016-b9a2-5ec69fcabd11" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">lsc32i.cmp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="70d8f2c0-ec7b-4b7e-a6bb-6828c14c34f1" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">ocxstate.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b8f84b4b-69f6-4a68-a0f9-75b3c2915c2c" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">opdocx.gxt</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e70f1e8f-c241-4cc1-a0d5-261ad52a3eec" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">sccme.hrp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="beb7f7b1-fbdd-4afe-9b80-80d2f02c86b4" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">scprd.hrd</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3e799419-b585-436b-a519-ad4a4bcbf86a" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">syncls.gxk</Content>
+      </IndicatorItem>
+      <IndicatorItem id="37d5a413-fe45-4b97-98a8-eea571d854b2" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">lgdrke.swk</Content>
+      </IndicatorItem>
+      <IndicatorItem id="64e5973a-3f6e-4208-a9f6-7f09134eb0c3" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">sdlvk.acx</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c3327e2c-3d0e-481f-8056-27cc371f8d80" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">wsdktr.ltp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b089572f-bce0-4f53-83a7-da415cd9eb75" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">synhfr.pkc</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2ee88b3d-a9f4-4273-ba66-c40d3f61c5d1" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">scpkrp.gmx</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6a69f236-c4ea-4f99-9c01-eec0e73aca14" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">rfkscp.pck</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d5eaa5ef-dbeb-4d36-8faa-862709453d79" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">qsdtlp.rcp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="093a981b-be23-4c15-a7d1-374e9126e098" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\SSDPserv32\ssdtrbs</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0827c17e-25fd-48d1-8257-378b117ed838" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\smrdprev\smrdprev_</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8ccd0bfc-0cd3-4094-a3e4-5f8bace231ce" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\Microsoft\RtkN32Gdi.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3aa8e48f-8a6d-464b-8e2e-0aa67f6a79d5" condition="contains">
+        <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="mir" />
+        <Content type="string">dfgber7t8234ytfndfugh5vndfuvh4</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e0a91d0a-3988-4710-a23a-da6470dff1e1" condition="contains">
+        <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="mir" />
+        <Content type="string">dfgbsdfjvabufqgwiffuvh4</Content>
+      </IndicatorItem>
+      <IndicatorItem id="00f0fbef-5439-4cf3-89f9-30d5d0fdbd07" condition="contains">
+        <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="mir" />
+        <Content type="string">208D2C60-3AEA-1069-A2D7-08002B30309D</Content>
+      </IndicatorItem>
+      <IndicatorItem id="626a6951-402f-4269-a67b-dda9ceccafe0" condition="contains">
+        <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="mir" />
+        <Content type="string">huiofwhfiowjcpowjkcwcophwvurweionwopmcvopwkvpwjnhopv</Content>
+      </IndicatorItem>
+      <IndicatorItem id="44b9db80-b9f8-4dd5-bf1a-d8900e56d28e" condition="contains">
+        <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="mir" />
+        <Content type="string">sysvolumecheckasdfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4fd38796-f8ad-4220-968c-abb4e58fb795" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">bb-apps-world.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ee7c2e4d-fe3b-45a3-a3fb-0b78348e062d" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">blackberry-apps-world.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2f638fb3-0074-4429-b4e7-c866c3bfe3af" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">blackberry-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="83549bb4-b196-450e-b15e-955bc401f70e" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">csrss-check-new.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="31b12384-5483-433a-8a75-a9d572cc8132" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">csrss-update-new.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fb696c99-8218-4cdf-a213-b6037215f1fb" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">csrss-upgrade-new.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="23bf5e94-634b-4cdd-9897-27f3b3158259" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">dailyinfonews.net</Content>
+      </IndicatorItem>
+      <IndicatorItem id="47019721-50c4-4c84-bd85-97335c965274" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">dll-host.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cf5920bc-4e31-47f5-8835-e8a302e603d8" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">dll-host-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7767a3ce-50b7-4038-9e2e-deec25189f20" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">dll-host-udate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b7e2063b-cdf3-4a98-a2f9-e802ad0424d7" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">dll-host-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ab1c7cdc-f298-4f75-9cd6-d92ddeb35628" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">dllupdate.info</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d78682a0-60f6-4b37-9ca4-fd8d54f6f374" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">drivers-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1080cf74-c0cb-482f-a923-d26a9d85eef0" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">drivers-get.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8fcd632e-8f79-45b3-9c19-593ebb711d69" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">drivers-update-online.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="18abaa8f-fe47-4ea2-be96-55d07ff7433b" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">genuine-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="82d2e486-b676-4855-afee-bc5899b3bb55" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">genuineservicecheck.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="82407d8a-44da-4af9-b725-1b85db01cbe3" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">genuineupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1054f00f-113a-4a8d-9854-587b434447c2" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">hotinfonews.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="da6f50f0-005e-4da8-8cc1-a9809f9a3d0a" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">microsoftcheck.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="256756cf-9728-4ced-b97d-9c4305079ec3" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">microsoft-msdn.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9639abd2-40df-4291-afa2-9056695e0c6b" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">microsoftosupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0d32e924-548b-4954-b1ec-b7c45c332500" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">mobileimho.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c7a7cf25-a79c-4b2a-82a4-e0871b490b28" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">mobileimho.ru</Content>
+      </IndicatorItem>
+      <IndicatorItem id="46db99f5-97a2-43a3-b38d-e0cfbacac634" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">mobile-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ee7cf69d-4a2a-44fd-a74c-800f9300c735" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">msgenuine.net</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3e1686d8-a77d-4570-bfd3-513a6e9c24ed" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">msinfoonline.org</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3d945958-f3d4-4399-9208-1417e9a6ce8f" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">msonlinecheck.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1354b4a6-be12-40b4-af53-c5b4f8a45f14" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">msonlineget.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c95b0497-7c35-44b9-bf5e-e57aeeda7ce0" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">msonlineupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="815c34db-6337-4749-85ee-154abdb6d464" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">ms-software-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e426db92-5c70-4ebf-b063-19dc092b0e0c" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">ms-software-genuine.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="24a91790-3346-4deb-8bdd-09b07fea3eb1" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">ms-software-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a7ef3c69-f517-4005-b1bf-3928dc39438d" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">new-driver-upgrade.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c37f4b6e-ed15-40a7-a177-d3835c2f5bc7" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">nt-windows-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="80f77b21-1f63-4533-8596-a72897c7641d" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">nt-windows-online.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ad8ca168-771d-45de-aacb-bd0e85e1f161" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">nt-windows-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5bdc4da1-8ffc-4a32-8073-fe8658f1f691" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">osgenuine.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4cc4362e-14d3-47f6-b5f5-c5fae84a4980" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">os-microsoft-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="669be17c-407e-4841-a1dc-b1385d1f5d2c" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">os-microsoft-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="bfde4180-162c-408a-863c-1cbec8563e29" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">security-mobile.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9bcc8b57-c6a6-49b1-8ac1-f04de482b7c5" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">shellupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="330eae57-fb3d-4253-846b-2df06f5d8206" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">svchost-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="79dea582-1adb-4e83-b28b-9f33c32718c9" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">svchost-online.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="733ff04b-d615-4e01-8fad-dca0fb237de9" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">svchost-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="708283b2-210a-4980-b6be-1f0606ccb005" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">update-genuine.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="171969c2-d66b-4c6a-9405-2081b054e819" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">win-check-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ed850adc-c253-4dc1-832b-7885762ae765" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">windowscheckupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="388727e9-a288-4688-acfe-7653ae5c4876" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">windows-genuine.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="be9e26ff-2319-4196-91ae-b8041bf0a7de" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">windowsonlineupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2442216e-bba1-4617-a9f6-253efb04a0ab" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">win-driver-upgrade.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="bb226cb2-987f-4a3b-9499-0ad847ab13dc" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">wingenuine.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="88d3fc66-e4c2-4be0-9ed1-0c221ba8c49a" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">wins-driver-check.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="97f1d591-cc9d-42b3-80c3-a18d7075fc45" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">wins-driver-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="903999bb-d033-4978-b25d-efcdd33647d0" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">wins-update.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f679f760-bdd4-484b-b830-d1fd423dd19a" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">winupdateonline.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ded7624b-d323-4668-89f1-40aed1bf2a76" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">winupdateos.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="28f1421f-35e0-46e8-91fd-7474d996931b" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">world-mobile-congress.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fdc81f38-4878-4142-a4ea-86802264774d" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">xponlineupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="744f2397-dd5e-4f1e-95c4-4c98198aa654" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">141.101.239.225</Content>
+      </IndicatorItem>
+      <IndicatorItem id="848c749e-3be9-493b-b8d3-7e3695c95404" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">178.162.129.237</Content>
+      </IndicatorItem>
+      <IndicatorItem id="27c7af1c-c25c-4e1d-9703-864580614b65" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">178.162.182.42</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3592e4dc-8063-4f28-b92d-7a40f96e2281" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">178.63.208.49</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fd8738ab-53ee-4b74-ba39-90eab95c3487" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">188.40.19.247</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8227bb18-c13d-4b72-96b9-52221c1ac4a2" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">31.184.234.18</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e90ac588-9d61-400c-911a-3791c75c63fd" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">31.41.45.9</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f831b2a2-27ba-4115-af48-4161699e9b7e" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">37.235.54.48</Content>
+      </IndicatorItem>
+      <IndicatorItem id="694599f8-6f8f-4ce5-ad84-34a8a35a92d5" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">46.4.202.86</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c5514395-cdeb-4f9a-a4da-e7671b57828b" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">77.72.133.161</Content>
+      </IndicatorItem>
+      <IndicatorItem id="dd5f38a3-5fa1-454a-81a0-161e25a3a22e" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">78.46.173.15</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b6f4328c-b746-4f31-92e6-9b9eb391f5a4" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">88.198.30.44</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8edc7067-57e9-456e-ba13-d8ae07b2a2da" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">88.198.85.161</Content>
+      </IndicatorItem>
+      <IndicatorItem id="70fbb659-e7c0-4307-8c35-57accb588373" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">88.198.85.162</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cd0c81c4-6e3d-459d-97fa-0fc65ae5f6a3" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">92.53.105.40</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f8e1a321-0cf9-4e87-9699-c6211601191e" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">95.168.172.69</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b0720709-fd31-47b2-af71-a82bf4d78e99" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">31.41.45.139</Content>
+      </IndicatorItem>
+      <IndicatorItem id="07b31160-dcf5-4929-b12b-a75311aa18cc" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">91.226.31.40</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c48826e5-cb20-40e3-8b38-971f5cad569b" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">178.63.208.63</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ebe762db-34fd-4498-91fe-9485fe8b6e03" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">31.41.45.119</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7d18d6af-2593-447a-8ea4-fe07543c839a" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">176.9.241.254</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1a732063-30e7-4b19-a6dd-0acfbda894c1" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">31.41.45.179</Content>
+      </IndicatorItem>
+      <IndicatorItem id="60110906-8505-4c1c-bd76-022cffcd4fb1" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">176.9.189.36</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2a5907ca-9ced-4952-8b17-2091c51dd84d" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">92.53.105.214</Content>
+      </IndicatorItem>
+      <IndicatorItem id="567705c0-26b5-4a87-a84e-1c6e794a7b8f" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">188.40.19.244</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6252207f-fec6-40a8-ac72-39417f1507f2" condition="is">
+        <Context document="PortItem" search="PortItem/remoteIP" type="mir" />
+        <Content type="IP">85.25.104.57</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e88d68a5-4f93-4aef-a2e0-35fecb454274" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">%ALLUSERSPROFILE%\adt.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9444a3b8-e017-4cbd-b694-b865ea75bfa9" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">%LOCALAPPDATA%\adt.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="89e73485-4731-4bce-a135-c1ee492a8982" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">adobe_upd_imhbfex_</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6e98d74b-c071-4ec3-af84-4ba77f92bd0e" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">bestcrypt_update.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5b7b1d60-8a28-4db8-825f-d5e2a6306961" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">bestcrypt_update.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1a7eb8db-227d-4a77-97ce-23d457da2b4c" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">imapisync32.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5f85ed1c-2392-459b-9d76-903f0e4b9043" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\hsperfdata32sys\bcmntc_rt_</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f171b8b2-0db9-4ebe-872d-b5dc2e229506" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\hdbrt32sys\ms32jxtr.dat</Content>
+      </IndicatorItem>
+      <Indicator operator="AND" id="852878d4-5ab6-4ba5-b538-1595618b8447">
+        <IndicatorItem id="b87be921-09d6-4e2c-aa6a-b3c0c5a652be" condition="contains">
+          <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+          <Content type="string">\Windows NT\</Content>
+        </IndicatorItem>
+        <Indicator operator="OR" id="400c4568-541e-4e0a-afdf-db6a70ee79e4">
+          <IndicatorItem id="0fe18ccd-9883-48bb-b19d-61c804c4d206" condition="contains">
+            <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+            <Content type="string">svchost.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="50323047-16e6-41ee-a93a-27a9d2f1e69c" condition="contains">
+            <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+            <Content type="string">svclogon.exe</Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+      <Indicator operator="AND" id="52ec8217-fae4-4854-bf8e-dbc494d19c49">
+        <IndicatorItem id="be7a52c0-d312-4d9c-8ea8-d0669242f75b" condition="is">
+          <Context document="ProcessItem" search="ProcessItem/SectionList/MemorySection/PEInfo/Sections/Section/Name" type="mir" />
+          <Content type="string">.sxdata</Content>
+        </IndicatorItem>
+        <Indicator operator="OR" id="819d3a9c-59e4-4bec-81bd-5ff7e9fbdb20">
+          <IndicatorItem id="c253e5eb-bd8c-4e14-92a7-5bf7ac1d1a90" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">rkef09erf90kerf9k34fo3kfo3ekdf2[l'2dl2043dl4d03ld34fkf4j</Content>
+          </IndicatorItem>
+          <IndicatorItem id="17ce74d4-73af-4e12-9864-ec766cce8152" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">sdfg45fyhh656ffhjfddsd5hkjfgccdxs4waaxzhjjy6yrre4dhjmmtr357643fbnffr</Content>
+          </IndicatorItem>
+          <IndicatorItem id="a0929075-2e40-4e6f-a031-cf71feb50ffc" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">sfgsrykw5rwqedg43564ytdfbgkfgnxczagsd6566igfsdr656867idffghkgdsdsdtd</Content>
+          </IndicatorItem>
+          <IndicatorItem id="794b434a-9939-44a2-a53e-c5930dc9655c" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">jr89h5tr489fg954dewdwedwehg845jhgi54jgljg54j3gj589gh489h2php</Content>
+          </IndicatorItem>
+          <IndicatorItem id="506f1e60-6b97-4801-bb53-d3566e0a1b32" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">384r783fh374fh37hf349hf9348hf938fh3894hf893h4f89h3489fh3894f8</Content>
+          </IndicatorItem>
+          <IndicatorItem id="fa323d3e-3a72-4334-b675-f3afa0c4201e" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">3497888hf8943hf89j389fj8934jf9843jf983j489fjjj43ghkjnbsdfjhsdf8374</Content>
+          </IndicatorItem>
+          <IndicatorItem id="8e3a8c77-ba12-4777-9a9c-521535c1646f" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">0641cn34873cn47832cyn43ycn43yo5c4n5ynyynyn324y5c324yn5c3yn5c</Content>
+          </IndicatorItem>
+          <IndicatorItem id="60df6f57-a84f-47d1-bb09-72498ac5ddfe" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">ldfn34fdldsflivfu4tu3049u039utgf9vuxdf0gu0349ut34po5j432pakoew02o3ox</Content>
+          </IndicatorItem>
+          <IndicatorItem id="13873702-6367-4087-8427-d6e39d7a7e8e" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">efkggjfrut454329wehdfgtriwnxcmgf457edhajzq234yr4fkkdjsheirtyjghfgks</Content>
+          </IndicatorItem>
+          <IndicatorItem id="1f04ee91-b6d0-4e64-947a-22a10f22d222" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">dkeerqwerfgvg467643fffdffhf5443DGFRESD2455667QQEwrfgu45kj535kj534m5n</Content>
+          </IndicatorItem>
+          <IndicatorItem id="fc7a56d0-3f7e-4f69-ae3d-18e358c3db1f" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">awsrrqwerfgvg4676e34gfdffhf5443DGFRESD2547967QQEwrfgu45kj535kj53we4u</Content>
+          </IndicatorItem>
+          <IndicatorItem id="a31ad2a3-5ddc-43ac-a6c1-50989b4eb269" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">rtei458ghfjdkeirutnawqpondfrjuwgsfroinher5409srncbdhreqpodjrv5438hr</Content>
+          </IndicatorItem>
+          <IndicatorItem id="257c1955-3a5b-451e-b6cd-7b01aa1cfe1f" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">qwertfhsjazxbcvnmkdlruwe23458732wuryfjghc4whcfggbjd3skdjfksfsf543ie</Content>
+          </IndicatorItem>
+          <IndicatorItem id="9e2b2e81-105b-4ff7-8cf9-87fe382f7c73" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">ekrjdfh56urti34569382wqhdjfvncmdjqlosjhdfmazplkeey4559382dkwuueiowo</Content>
+          </IndicatorItem>
+          <IndicatorItem id="5a234ed4-5026-4deb-9c5c-d6ebbace7f4b" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">dfr45e6uyt39gth45ncv43fjhrmlpotyiulqawert65hfjtrewow62krifje9532j3e</Content>
+          </IndicatorItem>
+          <IndicatorItem id="3126807e-b9e2-4fef-a965-4ded9f6daf36" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">a6749328347569483ryedfbcsjqopehf4rbdjwhse945hsdrgskwjr2354sheg3472s</Content>
+          </IndicatorItem>
+          <IndicatorItem id="217c6c05-85f0-44e5-9d4e-3ee3da5ae2b4" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">ldfn34fdldsflivfu4tu3049u039utgf9vuxdf0gu0349ut34po5j432pakoew02o3ox</Content>
+          </IndicatorItem>
+          <IndicatorItem id="2228890d-1c63-44da-bed4-bdc12f50eeab" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">dfdedkwe3322oeitodkdjeio3e9ekdjwasddcncmvjdasalwpeoryg7534hvn5wewse</Content>
+          </IndicatorItem>
+          <IndicatorItem id="51275be5-cf01-4e8b-bf66-99043542a112" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">eerklxcbs4783dtglwetpoqweo33wketkasdlgasdjgakti3eqtojqwoiedgoiddfgo</Content>
+          </IndicatorItem>
+          <IndicatorItem id="63f440ba-1673-4b99-873d-abf9c8ea4845" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">erhg548rhgflri4932nvg56832hdfjcnrlsjqpmdrewjdhaznrow321hfrjska38rua</Content>
+          </IndicatorItem>
+          <IndicatorItem id="61f9fa90-3788-417b-b280-cce543bd381e" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">hyjtri458ejshertkcbnvbn44cjfthweeowqksdjfklgorpwwjkdfj5i4wos89423od</Content>
+          </IndicatorItem>
+          <IndicatorItem id="e3c9cfc5-56ad-4d42-882d-82741434443a" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">dfwjdh45683jsmcnrt5938qjdhertlmncbfgtjwpaj438271jdhr4hdbsuqplmk34hs</Content>
+          </IndicatorItem>
+          <IndicatorItem id="6f812b28-4bfe-42e9-b22f-105386772f50" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/StringList/string" type="mir" />
+            <Content type="string">dfgsdgjweerqkwdgofjsdfokgbjoi5290348t0dfjgbsjr65jopofkaj345j4tdfgsd</Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+      <Indicator operator="AND" id="2cd7ec90-4fb8-4102-8590-1a665d7c4a07">
+        <IndicatorItem id="a8b65ad5-2943-4a57-97e3-332bd3eb78a1" condition="contains">
+          <Context document="FileItem" search="FileItem/StringList/string" type="mir" />
+          <Content type="string">.?AVMPTraitor@@</Content>
+        </IndicatorItem>
+        <Indicator operator="OR" id="67127728-f58c-4cd3-ad53-0bfd9f2a595a">
+          <IndicatorItem id="bb5351a4-2f97-4ab1-913a-3309a56eba9e" condition="contains">
+            <Context document="FileItem" search="FileItem/PEInfo/Type" type="mir" />
+            <Content type="string">Executable</Content>
+          </IndicatorItem>
+          <IndicatorItem id="98e0d1b2-739c-47b4-8e13-a58278adcb15" condition="contains">
+            <Context document="FileItem" search="FileItem/PEInfo/Type" type="mir" />
+            <Content type="string">Dll</Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+      <Indicator operator="AND" id="0405cefd-2ad6-4172-82aa-164ddfd7f4d4">
+        <IndicatorItem id="4bba1235-f621-40f7-b34f-8c340d9de7ad" condition="contains">
+          <Context document="RegistryItem" search="RegistryItem/Path" type="mir" />
+          <Content type="string">Software\Microsoft\Windows\CurrentVersion\Run</Content>
+        </IndicatorItem>
+        <Indicator operator="OR" id="ea352277-66b7-46e4-87f5-79cd44af999c">
+          <IndicatorItem id="d4e9da77-60dd-4243-9d14-3460b1d90dd2" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="mir" />
+            <Content type="string">\Windows NT\svchost.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="1ff143d9-14f0-42aa-8cc7-029128578551" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="mir" />
+            <Content type="string">\Windows NT\svclogon.exe</Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+    </Indicator>
+  </definition>
+</ioc>
