@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="3433dad8-879e-40d9-98b3-92ddc75f0dcd" last-modified="2013-03-13T19:13:59" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>APT NGO WUACLT</short_description>
+  <description>This family of malware consists of backdoors that attempt to fetch encoded commands over HTTP. The malware is capable of downloading a file, downloading and executing a file, executing arbitrary shell commands, or sleeping a specified interval.</description>
+  <authored_by>Mandiant</authored_by>
+  <authored_date>2013-02-10T06:11:53</authored_date>
+  <links>
+    <link rel="Family">MINIASP</link>
+    <link rel="threatgroup">APT</link>
+    <link rel="family">APT1</link>
+    <link rel="category">Backdoor</link>
+  </links>
+  <definition>
+    <Indicator operator="OR" id="34a5f05a-f830-4d55-bb09-c1e8745a998d">
+      <IndicatorItem id="7ebca5f2-2b13-4422-9bb1-b63d1eb04a22" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">6eebee2aebd5194db62cb8230502378c</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ab8860f7-0ef1-4933-bd94-9501717aa348" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">620c6a6cff832e35090487680123f52b</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5f3d57ff-610b-48c2-8417-1dd10dad9939" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">81b03cbcfc4b9d090cd8f5e5da816895</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e7039ae1-5b5b-4908-8e82-bd78769cfc9a" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">e476e4a24f8b4ff4c8a0b260aa35fc9f</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f3742769-61fb-4de7-b257-fcc60a01507e" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">77fbfed235d6062212a3e43211a5706e</Content>
+      </IndicatorItem>
+      <IndicatorItem id="60fc1671-3ae4-4aeb-b222-0899d1b5888f" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">52509abd1cc7b7fb391b19929e0d99c0</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1ca7eba3-263b-4fa7-8141-e69e58ed2d40" condition="is">
+        <Context document="FileItem" search="FileItem/StringList/string" type="mir" />
+        <Content type="string">miniasp</Content>
+        <Comment>unique strings found in most samples in family</Comment>
+      </IndicatorItem>
+      <IndicatorItem id="09cd0494-702c-4fe2-bbd4-29538cb3b685" condition="contains">
+        <Context document="FileItem" search="FileItem/StringList/string" type="mir" />
+        <Content type="string">http://%s/record.asp?device_t=%s</Content>
+        <Comment>unique strings found in most samples in family</Comment>
+      </IndicatorItem>
+      <IndicatorItem id="39d9bd47-612c-4aeb-8e79-76acb99f9f0b" condition="is">
+        <Context document="FileItem" search="FileItem/StringList/string" type="mir" />
+        <Content type="string">open internet failed...</Content>
+        <Comment>unique strings found in most samples in family</Comment>
+      </IndicatorItem>
+      <IndicatorItem id="0d6e8bad-30e5-4cca-abcb-893d88074d30" condition="is">
+        <Context document="FileItem" search="FileItem/StringList/string" type="mir" />
+        <Content type="string">q0nc9w8edaoiuk2mzrfy3xt1p5ls67g4bvhj</Content>
+        <Comment>unique strings found in most samples in family</Comment>
+      </IndicatorItem>
+      <Indicator operator="AND" id="5a0df84f-8cb8-4ab6-854b-4a37a96164ea">
+        <Indicator operator="OR" id="ea03cbab-17bd-41c5-8c55-e8e91cfcf354">
+          <IndicatorItem id="df92717a-a7ea-4afc-b7b9-a523b19b4324" condition="is">
+            <Context document="FileItem" search="FileItem/SizeInBytes" type="mir" />
+            <Content type="int">28160</Content>
+          </IndicatorItem>
+          <IndicatorItem id="d41a75fd-8083-4b7a-9f1a-a514146a079a" condition="is">
+            <Context document="FileItem" search="FileItem/SizeInBytes" type="mir" />
+            <Content type="int">497783</Content>
+          </IndicatorItem>
+          <IndicatorItem id="a1fc93dd-571c-403e-9eda-94a190489687" condition="is">
+            <Context document="FileItem" search="FileItem/SizeInBytes" type="mir" />
+            <Content type="int">56320</Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="OR" id="4c5327fe-83f5-429b-9943-f8c8adae2fd7">
+          <IndicatorItem id="aa42802b-6766-4cda-84d5-595e384b39ec" condition="is">
+            <Context document="FileItem" search="FileItem/PEInfo/PETimeStamp" type="mir" />
+            <Content type="date">2011-10-14T08:20:10Z</Content>
+          </IndicatorItem>
+          <IndicatorItem id="2d663d81-6681-4deb-b7ef-4e6c710b3dcf" condition="is">
+            <Context document="FileItem" search="FileItem/PEInfo/PETimeStamp" type="mir" />
+            <Content type="date">2011-10-23T07:42:47Z</Content>
+          </IndicatorItem>
+          <IndicatorItem id="d7762c98-0dd0-4c9a-a449-9043e6510c70" condition="is">
+            <Context document="FileItem" search="FileItem/PEInfo/PETimeStamp" type="mir" />
+            <Content type="date">2012-06-04T12:57:35Z</Content>
+          </IndicatorItem>
+          <IndicatorItem id="e21f4677-be4d-456b-a847-08e0e6c39b0f" condition="is">
+            <Context document="FileItem" search="FileItem/PEInfo/PETimeStamp" type="mir" />
+            <Content type="date">2012-06-09T13:19:49Z</Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="OR" id="4515a703-481b-46a6-b843-866e651dd5b5">
+          <IndicatorItem id="bcd34f8a-8828-479d-bbfd-f371ae439606" condition="is">
+            <Context document="FileItem" search="FileItem/FileName" type="mir" />
+            <Content type="string">acrord32ram.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="a63d9d35-d375-4c88-8d5b-0becafd94da0" condition="is">
+            <Context document="FileItem" search="FileItem/FileName" type="mir" />
+            <Content type="string">winword.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="72dda272-72e5-4009-b0cd-559b1dab182f" condition="is">
+            <Context document="FileItem" search="FileItem/FileName" type="mir" />
+            <Content type="string">acrord32.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="22bda1e4-5ed4-4212-86a9-a62172dec217" condition="is">
+            <Context document="FileItem" search="FileItem/FileName" type="mir" />
+            <Content type="string">ituneshelper.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="d76a0387-eb69-472b-98ea-ee4b3ecb13d3" condition="is">
+            <Context document="FileItem" search="FileItem/FileName" type="mir" />
+            <Content type="string">power_gen_2012.exe</Content>
+          </IndicatorItem>
+          <IndicatorItem id="1c31343b-beaf-41ab-b954-7602eb7e5c5c" condition="contains">
+            <Context document="FileItem" search="FileItem/PEInfo/DetectedAnomalies/string" type="mir" />
+            <Content type="string">checksum_mismatch</Content>
+            <Comment>anomaly found in some samples</Comment>
+          </IndicatorItem>
+          <IndicatorItem id="d6c354bb-9b63-48d3-8d7f-a82811cc9ffb" condition="contains">
+            <Context document="FileItem" search="FileItem/PEInfo/DetectedAnomalies/string" type="mir" />
+            <Content type="string">checksum_is_zero</Content>
+            <Comment>anomaly found in some samples</Comment>
+          </IndicatorItem>
+          <IndicatorItem id="d40244c9-69f3-4e20-a945-4d30ce050392" condition="contains">
+            <Context document="FileItem" search="FileItem/PEInfo/DetectedAnomalies/string" type="mir" />
+            <Content type="string">contains_eof_data</Content>
+            <Comment>anomaly found in some samples</Comment>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+    </Indicator>
+  </definition>
+</ioc>
