@@ -13,7 +13,13 @@ function genericOnClick(info, tab) {
 			chrome.tabs.create({url: "http://urlquery.net/queued.php?id="+ obj["queue_id"]});
 		}
 	}
-	http.send("method=urlquery_submit&url="+info.linkUrl+"&useragent=Mozilla%2F5.0+(Windows%3B+U%3B+Windows+NT+6.1%3B+en-US%3B+rv%3A1.9.2.13)+Gecko%2F20101203+Firefox%2F3.6.13&referer=&adobereader=8.0&java=1.6.0_26&flags=0");
+	params = "method=urlquery_submit&url="+encodeURIComponent(info.linkUrl);
+	params += "&useragent="+encodeURIComponent(localStorage["useragent"]);
+	params += "&referer="+encodeURIComponent(localStorage["referer"]);
+	params += "&adobereader="+encodeURIComponent(localStorage["adobereader"]);
+	params += "&java="+encodeURIComponent(localStorage["java"]);
+	params += "&flags=0";
+	http.send(params);
 }
 
 var id = chrome.contextMenus.create({"title": "Send to urlQuery",
