@@ -50,7 +50,7 @@ class pyarad:
 				if self.net_socket == True:
 					self.conn.send(self.zdump_file(filename))
 				else:
-					self.conn.send(filename)
+					self.conn.send(os.path.abspath(filename))
 				return ast.literal_eval(self.conn.recv(1024))
 			else:
 				return []

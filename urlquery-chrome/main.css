@@ -30,7 +30,7 @@ p{margin-bottom:16px;line-height:150%;}
 body{background-color:#222e3e;background-attachment:fixed;color:#222;line-height:1;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-o-text-size-adjust:100%;text-size-adjust:100%;}
 background-repeat:no-repeat;background-size:142px 861px;background-position:100% 100%;}
 #billboard_wrapper{background-color:#10161e;text-align:center;padding:4px;border-bottom:1px solid #3e4c5e;}
-div#container{margin:0 auto;min-width:996px;width:996px;position:relative;}
+div#container{margin:15 auto;min-width:996px;width:996px;position:relative;}
 div#container_scale{margin:0 auto;min-width:996px;width:90%;position:relative;}
 div#body{border:2px solid #596d88;}
 

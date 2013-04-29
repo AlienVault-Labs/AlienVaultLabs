@@ -13,6 +13,7 @@ import os
 import ConfigParser
 import sys
 import zlib
+import unpack
 
 config = ConfigParser.ConfigParser()
 config.read("yarad.cfg")
@@ -43,6 +44,9 @@ def dipatch_client_unix_file(conn, rules):
 			if f == "!close":
 				break
 			if os.path.exists(f):
+				uf = unpack.unpack(f)
+				if uf:
+					f = uf
 				matches = []
 				for i in rules.match(f):
 					matches.append({
@@ -50,6 +54,8 @@ def dipatch_client_unix_file(conn, rules):
 							"meta": i.meta, "tags": i.tags
 						       })
 				conn.send(str(matches))
+				if uf:
+					unpack.delete(uf)
 			else:
 				conn.send("[]")
 		except:

@@ -1,5 +1,5 @@
 {
-	"name": "UrlQuery menu",
+	"name": "UrlQuery",
 	"description": "Send an url to UrlQuery",
 	"version": "0.1",
 	"permissions": ["<all_urls>", "contextMenus", "tabs"],
