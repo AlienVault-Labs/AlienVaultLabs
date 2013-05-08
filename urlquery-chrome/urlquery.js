@@ -4,16 +4,25 @@
 
 function genericOnClick(info, tab) {
 	var http = new XMLHttpRequest();
-	console.log("Sent to urlQuery: " + info.linkUrl);
+	url = (typeof(info.linkUrl)!="undefined")?info.linkUrl:info.selectionText;
+	console.log("Sent to urlQuery: " + url);
+	console.log(info)
 	http.open("POST", "http://urlquery.net/api/v2/post.php", true);
 	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	http.onreadystatechange = function() {
 		if(http.readyState == 4 && http.status == 200) {
 			var obj = JSON.parse(http.responseText);
-			chrome.tabs.create({url: "http://urlquery.net/queued.php?id="+ obj["queue_id"]});
+			if(obj["return_code"] == 3) {
+				var tmp = document.createElement("DIV");
+				tmp.innerHTML = obj["msg"];
+				var msg = tmp.textContent||tmp.innerText;
+				alert("UrlQuery "+ msg);
+			} else {
+				chrome.tabs.create({url: "http://urlquery.net/queued.php?id="+ obj["queue_id"]});
+			}
 		}
 	}
-	params = "method=urlquery_submit&url="+encodeURIComponent(info.linkUrl);
+	params = "method=urlquery_submit&url="+encodeURIComponent(url);
 	params += "&useragent="+encodeURIComponent(localStorage["useragent"]);
 	params += "&referer="+encodeURIComponent(localStorage["referer"]);
 	params += "&adobereader="+encodeURIComponent(localStorage["adobereader"]);
@@ -23,4 +32,4 @@ function genericOnClick(info, tab) {
 }
 
 var id = chrome.contextMenus.create({"title": "Send to urlQuery",
-	"contexts":["link"], "onclick": genericOnClick});
+	"contexts":["link","selection"], "onclick": genericOnClick});
