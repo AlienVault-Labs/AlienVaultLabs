@@ -1,0 +1,124 @@
+#!/usr/bin/env python
+
+'''ClearCutter - a general purpose log analysis tool with OSSIM-specific features'''
+
+__author__ = "CP Constantine"
+__email__ = "conrad@alienvault.com"
+__copyright__ = 'Copyright:Alienvault 2012'
+__credits__ = ["Conrad Constantine","Dominique Karg"]
+__version__ = "0.2"
+__license__ = "BSD"
+__status__ = "Prototype"
+__maintainer__ = "CP Constantine"
+
+import sys, argparse
+
+
+def DoLogExtract(args):
+    """
+    Commence Log Message Extraction mode
+    """ 
+    try:
+        from clearcutter import logidentify
+    except IOError:
+        print "Installation Error - logidentify.py not found"      
+        sys.exit() 
+    identify = logidentify.ClusterGroup(args)
+    identify.Run()
+    identify.Results()
+    if args.generate is True : identify.GenPlugin()
+    
+def DoLogParse(args):
+    """
+    Commence Plugin Parsing Mode
+    """
+    try:
+        from clearcutter import pluginparse
+    except IOError:
+        print "Installation Error - pluginparse.py not found"
+        sys.exit()
+    parse = pluginparse.ParsePlugin(args)
+    parse.Run()
+    parse.PrintResults()
+ 
+def DoLogProfile(args):
+    """
+    Commence OSSIM SID Profiling
+    """
+    # Prep Profiling
+    # Do the regular logparse
+    # Process and print the results
+    print "Not Yet Implemented"
+    sys.exit()
+
+def DoLogSequence(args):
+    """
+    Commence Log Behavior Sequencing
+    """
+    # Prep Sequencing
+    # Do the regular logparse
+    # Process and print the results
+    print "Not Yet Implemented"
+    sys.exit()
+
+
+#=========================1
+#Map Arg Modes to Launch functions
+Mode = {'identify' : DoLogExtract, 'parse' : DoLogParse, 'profile' : DoLogProfile, 'sequence' : DoLogSequence} 
+        
+def ParseArgs():
+    '''Generate Commandline Args Parser and select appropriate operation mode from them'''
+    parser = argparse.ArgumentParser(formatter_class = argparse.RawDescriptionHelpFormatter, \
+                                     description='Processes log files for SIEM consumption',
+                                     epilog='examples:\n\t%(prog)s identify sample.log\n\t%(prog)s parse plugin.cfg sample.log\n\t%(prog)s profile plugin.cfg sample.log')
+    modeparsers = parser.add_subparsers(help='Command Mode Help')
+           
+    identifyparser = modeparsers.add_parser('identify', help='Log Event Candidate Identification')
+    identifyparser.set_defaults(mode='identify') 
+    identifyparser.add_argument(dest='logfile', action='store', type=str, help='log file to process')
+    identifyparser.add_argument('-t', '--threshold', action='store', type=int, help='Threshold value for Variable Assignment', )
+    identifyparser.add_argument('-v', '--verbose', action='count', help='verbose mode - use multiple times to increase verbosity')
+    identifyparser.add_argument('-q', '--quiet', action='store_true', help='quiet mode - print nothing but results')
+    identifyparser.add_argument('-o', '--output', action='store', type = str, metavar = 'file' , help='Write results to <file>')
+    identifyparser.add_argument('-R', '--regexp', action='store', type = str, metavar = 'regexp' , help='Display results in Regular expression format')
+    identifyparser.add_argument('-G', '--generate', action='store_true', help='Generate a skeleton OSSIM plugin from the results')
+    
+    
+    
+    sequenceparser = modeparsers.add_parser('sequence', help='identify sequences of log messages')
+    sequenceparser.set_defaults(mode='sequence') 
+    sequenceparser.add_argument(dest='logfile', action='store', type=str, help='log file to process')
+    #sequenceparser.add_argument('-t', action='store', type=int, help='Threshold value for Variable Assignment', )
+    #sequenceparser.add_argument('-v', action='count',help='verbose mode - use multiple times to increase verbosity')
+    #sequenceparser.add_argument('-q', action='store_true',help='quiet mode - print nothing but results')
+    #sequenceparser.add_argument('-o', action='store', type = str, metavar = 'file' , help='Write results to <file>')
+    
+       
+    pluginparser = modeparsers.add_parser('parse',help = 'Parse regex list against logfile')
+    pluginparser.set_defaults(mode='parse')
+    pluginparser.add_argument(dest='plugin', action='store', type=str, help='OSSIM plugin .cfg file')
+    pluginparser.add_argument(dest='logfile', metavar='logfile', action='store', type=str, help='log file to process')
+    pluginparser.add_argument('-n', '--nomatch', action='store_true',  help='Show lines that are not matched by regexes')    
+    pluginparser.add_argument('-g', '--group', action='store', type=int, help='Show Matching values from regexp group name')        
+    pluginparser.add_argument('-v', '--verbose', action='count', help='verbose mode - use multiple times to increase verbosity')
+    pluginparser.add_argument('-q', '--quiet', action='store_true', help='quiet mode - print nothing but results')
+    pluginparser.add_argument('-o', '--output', action='store', type = str , help='Write results to <file>')
+    pluginparser.add_argument('-p', '--precheck', action='store_true' , help="Process the 'precheck' directve during parsing" )
+    pluginparser.add_argument('-f', '--force', action='store_true' , help="Ignore plugin errors and attempt to parse anyway" )
+    
+    
+    profileparser = modeparsers.add_parser('profile', help = 'Profile performance of regex list against logfile')
+    profileparser.set_defaults(mode='profile')
+    profileparser.add_argument(dest='plugin', action='store', type=str, help='OSSIM plugin .cfg file')
+    profileparser.add_argument(dest='logfile', metavar='logfile', action='store', type=str, help='log file to process')
+    profileparser.add_argument('-s', '--sort', action='store_true', help='Sort Results by Execution Time')
+    profileparser.add_argument('-v', '--verbose', action='count', help='verbose mode - use multiple times to increase verbosity')
+    profileparser.add_argument('-q', '--quiet', action='store_true', help='quiet mode - print nothing but results')
+    profileparser.add_argument('-o', '--output', action='store', type = str, metavar = 'file' , help='Write results to <file>')
+    
+    globalargs = parser.parse_args()
+    Mode[globalargs.mode](globalargs)
+
+if __name__ == '__main__':
+    ParseArgs()
+

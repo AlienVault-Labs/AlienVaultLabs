@@ -1,0 +1,84 @@
+
+Clearcutter is a tool for general log analysis, with the aim of automating many of the processes that have
+traditionally been done manually by security analysts handling unfamiliar log files.
+
+Presently it supports four major modes of operation (two of which are specific to Alienvault OSSIM)
+
+Identify - Locate 'unique' log messages within a log sample. By unique here, we mean the actual log message itself,
+regardless of the variable content. E.G. the log message "User admin logged into host gateway" is a unique log entry, 
+where the text 'admin' and 'gateway' are variable content, but the unique log message is "user <user> logged into host <host>"
+Identifying the specific log messages present in a log file is a key first step to further log processsing.
+
+
+logfile log file to process')
+-t, --threshold', action='store', type=int, help='Threshold value for Variable Assignment', )
+-v, --verbose', action='count', help='verbose mode - use multiple times to increase verbosity')
+-q, --quiet', action='store_true', help='quiet mode - print nothing but results')
+-o, --output', action='store', type = str, metavar = 'file' , help='Write results to <file>')
+-R, --regexp', action='store', type = str, metavar = 'regexp' , help='Display results in Regular expression format')
+-G, --generate', action='store_true', help='Generate a skeleton OSSIM plugin from the results')
+    
+=============================
+
+Sequence - The variable fields identified in the specific event messages are what identify sequences of logs that 
+identify specific behavioral actions. These sequences of actions are key to contexting logs into forensic nodes.
+Eg. the sequence
+	- <PID> Connection from host <IP>
+	- <PID> Valid Key Exchange from host <IP>
+	- <PID> User <user> is valid
+	- <PID> user <user> authenticated successfully
+	- <PID> new session <sessionID> started for user <user>
+	- <PID> session <sessionID> disconnected
+
+can be expressed as "Login session from user <user> from host <host>" (with an accompanyying begin and end time)
+
+sequenceparser = modeparsers.add_parser('sequence', help='identify sequences of log messages')
+    sequenceparser.set_defaults(mode='sequence') 
+    sequenceparser.add_argument(dest='logfile', action='store', type=str, help='log file to process')
+    #sequenceparser.add_argument('-t', action='store', type=int, help='Threshold value for Variable Assignment', )
+    #sequenceparser.add_argument('-v', action='count',help='verbose mode - use multiple times to increase verbosity')
+    #sequenceparser.add_argument('-q', action='store_true',help='quiet mode - print nothing but results')
+    #sequenceparser.add_argument('-o', action='store', type = str, metavar = 'file' , help='Write results to <file>')
+    
+
+==============================
+Parse - This mode is for matching a list of regular expressions to the content of a log file, and statistically
+identifying the log contents that match the list of expressions (matched and unmatched) both in total and per regexp.
+Also has an option to take the regexps from a OSSIM device plugin .cfg file.
+
+    pluginparser = modeparsers.add_parser('parse',help = 'Parse regex list against logfile')
+    pluginparser.set_defaults(mode='parse')
+    pluginparser.add_argument(dest='plugin', action='store', type=str, help='OSSIM plugin .cfg file')
+    pluginparser.add_argument(dest='logfile', metavar='logfile', action='store', type=str, help='log file to process')
+    pluginparser.add_argument('-n', '--nomatch', action='store_true',  help='Show lines that are not matched by regexes')    
+    pluginparser.add_argument('-g', '--group', action='store', type=int, help='Show Matching values from regexp group name')        
+    pluginparser.add_argument('-v', '--verbose', action='count', help='verbose mode - use multiple times to increase verbosity')
+    pluginparser.add_argument('-q', '--quiet', action='store_true', help='quiet mode - print nothing but results')
+    pluginparser.add_argument('-o', '--output', action='store', type = str , help='Write results to <file>')
+    pluginparser.add_argument('-p', '--precheck', action='store_true' , help="Process the 'precheck' directve during parsing" )
+ 
+
+==============================
+Profile - 
+
+profileparser = modeparsers.add_parser('profile', help = 'Profile performance of regex list against logfile')
+    profileparser.set_defaults(mode='profile')
+    profileparser.add_argument(dest='plugin', action='store', type=str, help='OSSIM plugin .cfg file')
+    profileparser.add_argument(dest='logfile', metavar='logfile', action='store', type=str, help='log file to process')
+    profileparser.add_argument('-s', '--sort', action='store_true', help='Sort Results by Execution Time')
+    profileparser.add_argument('-v', '--verbose', action='count', help='verbose mode - use multiple times to increase verbosity')
+    profileparser.add_argument('-q', '--quiet', action='store_true', help='quiet mode - print nothing but results')
+    profileparser.add_argument('-o', '--output', action='store', type = str, metavar = 'file' , help='Write results to <file>')
+  
+
+
+    
+    
+   
+    
+    
+    
+       
+   
+    
+    

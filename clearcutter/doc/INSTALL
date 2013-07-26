@@ -1,0 +1,14 @@
+You will need the following installed to run clearcutter
+
+	- Python (2.5 or higher, 2.7 recommended)
+		- the following modules
+			- setuptools
+			- argparse 
+			
+	(use easy_install or pip from your python distribution to install these)
+			
+to install locally to the system
+	python setup.py install
+	
+or just run the clear-cutter script directly
+
