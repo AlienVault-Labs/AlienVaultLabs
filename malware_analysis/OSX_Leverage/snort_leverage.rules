@@ -1,0 +1,1 @@
+alert tcp any any -> $EXTERNAL_NET any (msg:"OSX/Leverage.A Checkin"; flow:established,to_server; content:"|00 00|"; offset:0; depth:2; content:"|00 00 00 01|"; distance:2; within:4; pcre:"/\|\d+ \w+ RAM\n\|\d+\w+\/\d+\w+ free \(\d+% used\)/"; sid:1696991; rev:1;)
