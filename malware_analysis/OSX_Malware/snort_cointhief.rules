@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> any 53 (msg:"AV TROJAN OSX/CoinThief DNS Lookup (www.media02-cloudfront.com)"; content:"|01 00 00 01 00 00 00 00 00 00|"; depth:10; offset:2; content:"|03|www|12|media02-cloudfront|03|com|00|"; nocase; distance:0; fast_pattern; reference:md5,2b4e783151761597cb9e0ad777f4d6d0; classtype:trojan-activity; sid:9000008; rev:1;)
