@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> any 53 (msg:"AV TROJAN OSX/LaoShu DNS Query Domain floracrunch.com"; content:"|01 00 00 01 00 00 00 00 00 00|"; depth:10; offset:2; content:"|0b|floracrunch|03|com|00|"; fast_pattern; nocase; distance:0;  classtype:trojan-activity; sid:9000002; rev:1;)
