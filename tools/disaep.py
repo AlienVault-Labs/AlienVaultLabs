@@ -15,7 +15,7 @@ def lookAtEP(pe):
 
 def opPrint(data, ep_ava):
     print hexlify(data)
-    offset = 0
+    offset = 1
     while offset < len(data):
       i = pydasm.get_instruction(data[offset:], pydasm.MODE_32)
       if i:
